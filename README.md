@@ -1,108 +1,312 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Connect Consulting Logo](https://)
 
-Welcome rockymiss,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Connect Consulting
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+For my **Portfolio 4 Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created a Blog Website for a consulting Company called Connect Consulting.  
 
-## Gitpod Reminders
+Link to the deployed app is [here](https://connectconsulting.herokuapp.com/).
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+![alt text](https://mockup)
 
-A blue button should appear to click: _Make Public_,
+-----
 
-Another blue button should appear to click: _Open Browser_.
+## Objective?
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+-----
 
-A blue button should appear to click: _Make Public_,
+## User Experience
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### From a User's Perspective
+As a user it is important: 
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Users Fulfilment
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+-----
+## UX 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Home Page](docs/wireframes/homepage.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![About Page](docs/wireframes/about.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![Blog Page](docs/wireframes/blog.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Contact Page](docs/wireframes/contact.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Log-In Page](docs/wireframes/login.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![Register Page](docs/wireframes/register.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![User Page](docs/wireframes/userpage.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Admin Page](docs/wireframes/admin.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Existing Features
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Home
+<details open>
+<summary>Home</summary> 
+<p align="center"><img src=""></p>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+</details>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+-----
+## Technologies Used 
 
-------
 
-## FAQ about the uptime script
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) to provide content and structure to the website.
+- [CSS3](https://en.wikipedia.org/wiki/CSS) provides styles for the website.
+- [Python](https://www.python.org/) to provide functionality to the website. 
+- [a11y](https://color.a11y.com/Contrast/) to test contrast. 
+- [TinyPNG](https://tinypng.com/) to compress images.
+- [Cloudinary](https://cloudinary.com/) to store images. 
+- [GitPod](https://www.gitpod.io/) to create and edit the website. 
+- [GitHub](https://github.com/) to host website
+- [GitBash](https://www.atlassian.com/git/tutorials/git-bash#:~:text=What%20is%20Git%20Bash%3F,operating%20system%20through%20written%20commands.) to push changes to GitHub.
+- [Heroku](https://id.heroku.com/login) to deploy the website. 
+- [Balsamiq](https://balsamiq.com/) to create wireframes. 
+- [Draw.io](https://drawio-app.com/) to create logic flow chart. 
+- [vsCode](https://code.visualstudio.com/) to create logic flow chart.
+- [Google-Sheets](https://www.google.com/sheets/about/) to store username and scores. 
+- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) to debug and test responsiveness.
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+-----
+## Resources 
 
-**How will this affect me?**
+- [Code Institute](https://codeinstitute.net/ie/) for course materials, tutor and mentor support, in particular the use of google sheets and deployment to heroku.
+- [Slack](https://slack.com/intl/en-ie/) in particular the Code Institute Slack Community.
+- [W3schools](https://www.w3schools.com/) 
+- [Pexels](https://www.pexels.com/) images. 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Python Libraries/Modules/API
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+-----
+## Testing
 
-**So….?**
+### User Testing
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Manual Testing
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+### Validators 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Python files were tested using [Pep8 Validation](http://pep8online.com/checkresult). 
 
----
+<details open>
+<summary>file to  Validation</summary> 
+<p align="center"><img src="g"></p>
 
-Happy coding!
+</details>
+<br>
+
+
+
+###  Result: Chrome Lighthouse 
+
+I used Chrome Lighthouse to test Performance on the website. 
+
+<details open>
+<summary>Lighthouse Validation</summary> 
+<p align="center"><img src=""></p>
+
+</details>
+<br>
+
+
+### Color Contrast Testing 
+
+I used [a11y](https://https://color.a11y.com/) to test the color contrast on the website
+
+<details open>
+<summary>Color Contrast </summary> 
+<p align="center"><img src=""></p>
+
+</details>
+<br>
+
+
+### Issues/Bugs Fixed 
+
+**Heading**
+
+Content 
+
+
+<details open>
+<summary>Error</summary>
+<p align="center"><img src=""></p>
+</details>
+<br>
+
+
+-----
+## Version Control
+
+
+### Git and GitHub 
+
+Local repository and IDE used: GitPod
+Remote repository used: GitHub
+
+Steps followed: 
+- I created a new public repository on GitHub using the Code Institute template.
+- I then created a workspace and started coding on GitPod. 
+- All relevant files were created. 
+- To save my work safely I continued to use the terminal consistently by using: 
+    - **git add .** to add work to git
+    - **git commit -m""** to commit the work 
+    - **git push** to update work to GitHub 
+
+
+### Deployment to Heroku
+
+The website was deployed to heroku by doing the following: 
+
+1. Navigate to [heroku](https://id.heroku.com/login). 
+
+2. Click "new" and create a new App. 
+
+  <details open>
+  <summary>New App</summary>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974679/rugby/new-app-heroku_vteenf.png"></p>
+  </details>
+  <br>
+
+3. Give your app a name, choose your region and Click "Create app". 
+
+  <details open>
+  <summary>Name and Create</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974679/rugby/name-app-heroku_ein4ms.png"></p>
+
+  </details>
+
+4. The menus that we are concerned with are "Deploy" and "Settings".  Click on "Settings" First. 
+
+  <details open>
+  <summary>Settings</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974678/rugby/deploy-settings-heroku_zjvoxb.png"></p>
+
+  </details>
+
+5. Copy the contents of the creds.json file.  Insert "CREDS" into the key field and the entire contents of the file into the value field.  The template code provided will use this information to create the file called creds.json and write this data into it as the application is built. 
+
+  <details open>
+  <summary>Convig vars</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649978071/rugby/creds-heroku_fbc93f.png"></p>
+  </details>
+
+6. Buildpacks now need to be added.  These install future dependancies that we need outside of the requirements file.   The first is python and the second is node.js.  Select Python first and then node.js and click save.  Make sure they are in this order.
+
+  <details open>
+  <summary>Buildpacks</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974678/rugby/buildpacks-heroku_k4r9nm.png"></p>
+  </details>
+
+7. Then go to the deploy section and choose your deployment method.  To connect with github select github and confirm. 
+
+  <details open>
+  <summary>Connect to github</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974679/rugby/github-heroku_jcxvgc.png"></p>
+  </details>
+
+8. Search for your repo, select it and click connect. 
+
+  <details open>
+  <summary>Repo Search</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974679/rugby/search-repo-heroku_nyvzsi.png"></p>
+
+  </details>
+
+9. You can choose to either deploy using automatic deploys which means heroku will rebuild the app everytime you push your changes.  For this option choose the branch to deploy and click enable automatic deploys.  This can be changed at a later date to manual.  Manual deployment deploys the current state of a branch.  
+
+  <details open>
+  <summary>Manual Deployment</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974678/rugby/deployment-heroku_jqzzx7.png"></p>
+
+  </details>
+
+  <details open>
+  <summary>Automatic Deployment</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974678/rugby/auto-deploy-heroku_uwaljv.png"></p>
+
+  </details>
+
+
+10. Click deploy branch. 
+
+11. If successful you should be able to view your deployed app by clicking "View". 
+
+  <details open>
+  <summary>View Deployment</summary>
+  <br>
+  <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1649974678/rugby/choose-branch-hereoku_zuzwf6.png"></p>
+
+  </details>
+        
+    
+
+  ### Fork a Repository: 
+        
+    A copy can be made of a repository by forking the repository.  The copy can then be viewed and changed without affecting the original repository. 
+    
+      - From your list of repositories select the repository you want to fork.
+      - On the top of the page to the right had side you will see a fork image.  Click on the button to create a copy. 
+
+      
+  <details open>
+<summary>Fork Preview Image</summary>
+<br>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1642789173/kitchen-nippers/fork-preview_xraeo2.png"></p>
+
+</details>
+
+
+  ### Clone a Repository: 
+        
+    Cloning this project from GitHub can be done by following these steps: 
+    
+      - From your list of repositories select the repository you want to deploy.
+      - Click on the code tabe. 
+      - Click on the clipboard icon to copy the URL.  
+      - Open Git Bash in your IDE. 
+      - Change the current working directory to the location you want to place the clone. 
+      - Type git clone and paste the copied URL.  
+      - Press enter for the clone to be created. 
+
+  <details open>
+<summary>Clone Preview Image</summary>
+<br>
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1642790166/kitchen-nippers/clone-preview_kkvsfx.png"></p>
+
+</details>
+<br>
+
+## Credits 
+
+
+-----
+## Acknowledegments/Conclusion
+
+I couldn't complete this without the massive support I get from my Code Institute cohort in particular [Kasia](https://github.com/bezebee), our cohort facilitator.Thanks to my mentor Spencer for being a great support and a really nice guy!
+
+Rachel Rock September 2022
