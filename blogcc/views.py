@@ -49,6 +49,7 @@ class CreateBlogView(CreateView):
     form_class = CreateBlog
     success_url = reverse_lazy('blogs')
 
+
     def form_valid(self, form):
         """
         Validates the form and adds the new blog to the 
