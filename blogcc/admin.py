@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import BlogPost, BlogComment
+from .models import BlogPost, BlogComment, Testimonial
 
 
 @admin.register(BlogPost)
@@ -40,6 +40,31 @@ class CommentAdmin(admin.ModelAdmin):
     actions = ['approve_comments']
 
     def comment_approve(self, request, queryset):
+        """
+        Creates an action which allows admin to approve a comment
+        """
+        queryset.update(approve=True)
+
+
+@admin.register(Testimonial)
+class PostTestimonal(SummernoteModelAdmin):
+    """
+    Applies display, filter, and search functionality
+    to the BlogPost Model on the admin panel
+    """
+
+    search_fields = ['company_name', 'name',]
+    list_display = (
+                    'name',
+                    'company_name',
+                    'content',
+                    'approve',
+                    'date_created')
+    list_filter = ('date_created', 'approve',)
+    summernote_fields = ('content')
+    actions = ['approve_testimonials']
+
+    def testimonial_approve(self, request, queryset):
         """
         Creates an action which allows admin to approve a comment
         """
