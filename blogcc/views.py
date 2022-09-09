@@ -60,5 +60,5 @@ class CreateBlogView(CreateView):
         messages.success(
             self.request,
             'You have added a new blog')
-        form.slug = slugify(form.blog_title + "-" + form.blog_title)
+        form.slug = slugify(form.blog_subtitle)
         return super().form_valid(form)
