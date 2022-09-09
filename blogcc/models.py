@@ -56,7 +56,7 @@ class BlogComment(models.Model):
     email = models.EmailField()
     comment_created = models.DateTimeField(auto_now_add=True)
     comment_body = models.TextField()
-    comment_approve = models.BooleanField(default=False)
+    approve = models.BooleanField(default=False)
 
     class Meta:
         """

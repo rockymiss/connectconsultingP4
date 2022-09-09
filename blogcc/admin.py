@@ -23,4 +23,5 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'blog_created_on')
     prepopulated_fields = {'slug': ('blog_title',)}
     summernote_fields = ('blog_content')
-    
+
+
