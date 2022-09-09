@@ -4,6 +4,34 @@
 
 
 {% block content %}
-<h1>A List of Blogs</h1>
-    
+<div class="main-content container-fluid">
+    <div class="row">
+        {% for blog in bloglist %}
+        <div class="col-md-4">
+
+
+            <div class="card" style="width: 18rem;">
+                {% if "placeholder" in blog.blog_image_1.url %}
+                <img class="card-img-top hide">
+                {% else %}
+                <img src="{{ blog.blog_image_1.url }}" class="card-img-top" alt="{{ post.blog_title }}">
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">{{ blog.blog_title }}</h5>
+                  <p class="card-text">{{ blog.blog_subtitle }}</p>
+                  <p class="card-text">Author: {{ blog.author }}</p>
+                  <p class="card-text">Created on: {{ blog.blog_created_on }} <i class="fa-regular fa-star"></i>
+                    {{ post.number_of_favourites }}</p></p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+
+
+{% endfor %}
+
+        </div>
+    </div>
+</div>
+
 {% endblock %}
