@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Montserrat:wght@400;700&display=swap');
+
+/* Colour Palette */
+:root {
+    --black: #000000;
+    --white: #FCFCFC;
+    --crayolaYellow: #FFFFAB;
+    --greyfive: #e2dbdb;
+  }
+
+  
+/*Hides elements when not needed*/  
 .hide {
     display: none;
 }
+
