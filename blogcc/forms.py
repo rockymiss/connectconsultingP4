@@ -16,3 +16,4 @@ class CreateBlog(forms.ModelForm):
                   'blog_image_1',
                   'blog_image_2',
                   'status',)
+        prepopulated_fields = {'slug': ('blog_title',)}

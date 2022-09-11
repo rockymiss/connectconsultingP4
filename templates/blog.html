@@ -23,7 +23,7 @@
                   <p class="card-text">Author: {{ blog.author }}</p>
                   <p class="card-text">Created on: {{ blog.blog_created_on }} <i class="fa-regular fa-star"></i>
                     {{ post.number_of_favourites }}</p></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="{% url 'blog_detail' post.slug %}" class="btn btn-primary">View Blog</a>
                 </div>
             </div>
 
