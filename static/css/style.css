@@ -13,9 +13,42 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    
+    min-height: 100vh;    
   }
+
+/*Header nav bar styles*/
+
+nav, footer {
+    padding: 0;
+    margin: 0;
+    color: #000000;
+  }
+
+.dropdown-menu {
+    padding: 0 !important;
+    width: fit-content !important;
+  }
+
+.nav-item {
+  padding: 0 1rem !important;
+}
+
+/*Footer styles*/
+
+.footer-item {
+    justify-content: space-between;
+  }
+  
+footer {
+    flex-shrink: 0;
+  }
+  
+/* over write bootstrap footer style */
+.d-flex.align-content-end {
+    justify-content: space-around;
+  }
+
+
 
 
 
