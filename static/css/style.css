@@ -8,6 +8,10 @@
     --greyfive: #e2dbdb;
   }
 
+.grey-bg {
+    background-color: var(--greyfive);
+  }
+
 body {
    
     height: 100%;
