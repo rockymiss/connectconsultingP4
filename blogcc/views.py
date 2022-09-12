@@ -60,8 +60,9 @@ class CreateBlogView(CreateView):
 
 class BlogDetail(View):
     """
-    This class will display the blog the user selects from 
-    the BlogPostList
+    This class will display the blog the user selects from
+    the BlogPostList.  It will also render comments the 
+    user makes
     """
     
     def get(self, request, slug, *args, **kwargs):
@@ -80,6 +81,41 @@ class BlogDetail(View):
             {
                 "post": post,
                 "comments": comments,
+                "commented": False,
+                "blog_favourite": blog_favourite,
+                "comment_form": CreateComment()
+            },
+        )
+
+
+    def post(self, request, slug, *args, **kwargs):
+        queryset = BlogPost.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.user_comments.filter(
+                                             approve=True
+                                             ).order_by('comment_created')
+        blog_favourite = False
+        if post.blog_favourite.filter(id=self.request.user.id).exists():
+            blog_favourite = True
+
+        comment_form = CreateComment(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email 
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+        else:
+            comment_form = CreateComment()
+
+        return render(
+            request,
+            "blog_detail.html",
+            {
+                "post": post,
+                "comments": comments,
+                "commented": True,
                 "blog_favourite": blog_favourite,
                 "comment_form": CreateComment()
             },
