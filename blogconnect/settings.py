@@ -33,6 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['connect-consultingp4.herokuapp.com', 'localhost']
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 # Application definition
 
