@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, ListView, CreateView
 from django.views import generic, View
 from .models import BlogPost
-from .forms import CreateBlog
+from .forms import CreateBlog, CreateTestimonial
 from django.urls import reverse_lazy
 from django.utils.text import slugify
 
@@ -83,3 +83,23 @@ class BlogDetail(View):
                 "blog_favourite": blog_favourite
             },
         )
+
+# Testimonial Views
+
+class CreateTestimonView(CreateView):
+    """
+    Creates Testimonial view so that user can create 
+    a testionial on the front end
+    """
+    template_name = 'create_testimonial.html'
+    form_class = CreateTestimonial
+    success_url = reverse_lazy('index')
+
+    def form_valid(self, form):
+        """
+        Validates the form and adds the new testimonial to the
+        index.html page
+
+        """
+        form = form.save(commit=False)
+        return super().form_valid(form)

@@ -1,5 +1,5 @@
 from django import forms
-from .models import BlogPost
+from .models import BlogPost, Testimonial
 
 
 class CreateBlog(forms.ModelForm):
@@ -10,10 +10,21 @@ class CreateBlog(forms.ModelForm):
     class Meta:
         model = BlogPost
         fields = ('author',
-                  'blog_title', 
+                  'blog_title',
                   'blog_subtitle',
                   'blog_content',
                   'blog_image_1',
                   'blog_image_2',
                   'status',)
         prepopulated_fields = {'slug': ('blog_title',)}
+
+
+class CreateTestimonial(forms.ModelForm):
+    """
+    A form to allow the user or admin to create a testimonial
+    """
+    class Meta:
+        model = Testimonial
+        fields = ('name',
+                  'company_name',
+                  'content',)
