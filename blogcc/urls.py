@@ -9,4 +9,5 @@ urlpatterns = [
     path('create_blog/', views.CreateBlogView.as_view(), name='create_blog'),
     path('blog_detail/<slug:slug>/', views.BlogDetail.as_view(), name="blog_detail"),
     path('create_testimonial/', views.CreateTestimonView.as_view(), name="create_testimonial"),
+    path('admin_only/')
 ]

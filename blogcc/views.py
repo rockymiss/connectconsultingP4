@@ -140,3 +140,21 @@ class CreateTestimonView(CreateView):
         """
         form = form.save(commit=False)
         return super().form_valid(form)
+
+# Admin Only View
+
+class AdminOnlyView(ListView):
+    """
+    Checks to see if the User is a superuser and allows the
+    superuser to view comments not yet approved, made by users.  
+    """
+
+    def test_super(self):
+        """
+        Checks if the user is the superuser and allows
+        only them to view the admin.html page
+        """
+
+        return self.request.user.is_superuser
+    
+    template_name = 'admin_only.html'
