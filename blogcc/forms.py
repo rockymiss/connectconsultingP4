@@ -1,5 +1,5 @@
 from django import forms
-from .models import BlogPost, Testimonial
+from .models import BlogPost, Testimonial, BlogComment
 
 
 class CreateBlog(forms.ModelForm):
@@ -28,3 +28,14 @@ class CreateTestimonial(forms.ModelForm):
         fields = ('name',
                   'company_name',
                   'content',)
+
+
+class CreateComment(forms.ModelForm):
+    """
+    A form to allow a user to leave comments on a blog post
+    """
+    class Meta:
+        model = BlogComment
+        fields = ('comment_body',)
+
+

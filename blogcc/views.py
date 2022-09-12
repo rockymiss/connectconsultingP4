@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, ListView, CreateView
 from django.views import generic, View
 from .models import BlogPost
-from .forms import CreateBlog, CreateTestimonial
+from .forms import CreateBlog, CreateTestimonial, CreateComment
 from django.urls import reverse_lazy
 from django.utils.text import slugify
 
@@ -80,9 +80,11 @@ class BlogDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "blog_favourite": blog_favourite
+                "blog_favourite": blog_favourite,
+                "comment_form": CreateComment()
             },
         )
+
 
 # Testimonial Views
 
