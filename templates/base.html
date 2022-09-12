@@ -47,6 +47,22 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contact Us</a>
             </li>
+            {% if user.is_superuser %}
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Admin Only
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                
+                <li><a class="dropdown-item" href="{% url 'create_blog' %}">Create Blog</a></li>
+                <li><a class="dropdown-item" href="#">Approve Comments</a></li>
+                <li><a class="dropdown-item" href="#">Approve Testimonials</a></li>
+
+            
+              </ul>
+              {% endif %}
+              
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Log-In

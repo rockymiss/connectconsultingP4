@@ -2,6 +2,7 @@
 
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, ListView, CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic, View
 from .models import BlogPost
 from .forms import CreateBlog, CreateTestimonial, CreateComment
@@ -143,10 +144,12 @@ class CreateTestimonView(CreateView):
 
 # Admin Only View
 
-class AdminOnlyView(ListView):
+
+class AdminOnlyView(LoginRequiredMixin, TemplateView):
     """
     Checks to see if the User is a superuser and allows the
-    superuser to view comments not yet approved, made by users.  
+    superuser to choose between approving comments, approving
+    testimonials or Create a Blog  
     """
 
     def test_super(self):
@@ -157,4 +160,4 @@ class AdminOnlyView(ListView):
 
         return self.request.user.is_superuser
     
-    template_name = 'admin_only.html'
+    template_name = 'admin_only'
