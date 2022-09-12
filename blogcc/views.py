@@ -67,7 +67,9 @@ class BlogDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = BlogPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.user_comments.filter(approve=True).order_by('comment_date_created')
+        comments = post.user_comments.filter(
+                                             approve=True
+                                             ).order_by('comment_created')
         blog_favourite = False
         if post.blog_favourite.filter(id=self.request.user.id).exists():
             blog_favourite = True
