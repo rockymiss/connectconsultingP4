@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, ListView, CreateView
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.views import generic, View
-from .models import BlogPost
+from .models import BlogPost, BlogComment
 from .forms import CreateBlog, CreateTestimonial, CreateComment
 from django.urls import reverse_lazy
 from django.utils.text import slugify
@@ -37,34 +37,6 @@ class BlogPostList(generic.ListView):
     template_name = 'blog.html'
     paginate_by = 6
     context_object_name = "bloglist"
-
-
-class CreateBlogView(UserPassesTestMixin, CreateView):
-    """
-    Creates blog view so that admin can create a new
-    blog on the front end
-    """
-    
-    def test_func(self):
-        """
-        Checks if superuser
-        """
-        return self.request.user.is_superuser
-        
-    template_name = 'create_blog.html'
-    form_class = CreateBlog
-    success_url = reverse_lazy('blog')
-    
-
-    def form_valid(self, form):
-        """
-        Validates the form and adds the new blog to the 
-        blog.html page
-
-        """
-        form = form.save(commit=False)
-        form.slug = slugify(form.blog_subtitle)
-        return super().form_valid(form)
 
 
 class BlogDetail(View):
@@ -153,19 +125,59 @@ class CreateTestimonView(CreateView):
 # Admin Only View
 
 
-class AdminOnlyView(UserPassesTestMixin, TemplateView):
+class CreateBlogView(UserPassesTestMixin, CreateView):
     """
-    Checks to see if the User is a superuser and allows the
-    superuser to choose between approving comments, approving
-    testimonials or Create a Blog  
+    Creates blog view so that admin can create a new
+    blog on the front end
     """
-
+    
     def test_func(self):
         """
-        Checks if the user is the superuser and allows
-        only them to view the admin.html page
+        Checks if superuser
         """
-
         return self.request.user.is_superuser
+
+    template_name = 'create_blog.html'
+    form_class = CreateBlog
+    success_url = reverse_lazy('blog')
     
-    template_name = 'admin_only.html'
+
+    def form_valid(self, form):
+        """
+        Validates the form and adds the new blog to the 
+        blog.html page
+
+        """
+        form = form.save(commit=False)
+        form.slug = slugify(form.blog_subtitle)
+        return super().form_valid(form)
+
+
+class ApproveComments(UserPassesTestMixin, ListView):
+    """
+    Creates a view of the comments to be approved, which 
+    can only be access by admin. This allows admin to 
+    approve comments on the frontend
+    """
+    
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+        
+    template_name = 'approve_comments.html'
+    model = BlogComment
+    queryset = BlogComment.objects.filter(
+        approve=False).order_by('comment_created')
+    context_object_name = 'approval'
+    paginate_by = 3
+
+    def get_context_data(self, **kwargs):
+        """
+        Gets the comments for approval
+        """
+        context = super().get_context_data(**kwargs)
+        context['comments'] = BlogComment.objects.filter(
+            approve=False).order_by('comment_created')
+        return context
