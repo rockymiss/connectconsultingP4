@@ -2,7 +2,7 @@
 
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import TemplateView, ListView
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.http import HttpResponseRedirect
 from django.views import generic, View
@@ -209,6 +209,22 @@ class BlogUpdate(UserPassesTestMixin, UpdateView):
 
         form.save
         return super().form_valid(form)
+
+class BlogDelete(UserPassesTestMixin, DeleteView):
+    """
+    Admin who is logged in can delete any blogs 
+    that they have created
+    """
+    model = BlogPost
+    context_object_name = "bloglist"
+    template_name = 'blog_delete.html'
+    success_url = reverse_lazy('blog')
+
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
 
 
 class ApproveComments(UserPassesTestMixin, ListView):

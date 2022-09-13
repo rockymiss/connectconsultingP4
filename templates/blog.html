@@ -26,7 +26,8 @@
                     <span>
                       <a href="{% url 'blog_detail' blog.slug %}" class="btn btn-primary">View Blog</a>
                       {% if user.is_superuser %}
-                        <a href="{% url 'blog_review' blog.slug %}" class="btn btn-primary">Edit Blog</a>
+                        <a href="{% url 'blog_review' blog.slug %}" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'blog_delete' blog.slug %}" class="btn btn-primary">Delete</a>
                       {% endif %}
                       </span>
                 </div>

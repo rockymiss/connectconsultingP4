@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>Delete Blog</title>
+{% endblock %}
+
+
+{% block content %}
+<div>
+<h1>Are you sure you want to delete this blog?: "{{ bloglist }}"</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+</form>
+</div>
+    
+{% endblock %}
