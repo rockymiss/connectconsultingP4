@@ -1,8 +1,9 @@
 """Views"""
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import TemplateView, ListView, CreateView
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.http import HttpResponseRedirect
 from django.views import generic, View
 from .models import BlogPost, BlogComment
 from .forms import CreateBlog, CreateTestimonial, CreateComment
@@ -121,6 +122,23 @@ class CreateTestimonView(CreateView):
         """
         form = form.save(commit=False)
         return super().form_valid(form)
+
+# Favourites Post
+
+class Favourites(View):
+    """
+    Creates a view so user can like blogs
+    """
+
+    def post(self, request, slug):
+        post = get_object_or_404(BlogPost, slug=slug)
+
+        if post.blog_favourite.filter(id=request.user.id).exists():
+            post.blog_favourite.remove(request.user)
+        else:
+            post.blog_favourite.add(request.user)
+        
+        return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
 
 # Admin Only View
 
