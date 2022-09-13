@@ -118,7 +118,6 @@ class CreateTestimonView(CreateView):
         """
         Validates the form and adds the new testimonial to the
         index.html page
-
         """
         form = form.save(commit=False)
         return super().form_valid(form)
@@ -164,7 +163,6 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
         """
         Validates the form and adds the new blog to the 
         blog.html page
-
         """
         form = form.save(commit=False)
         form.slug = slugify(form.blog_subtitle)
