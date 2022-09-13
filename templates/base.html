@@ -70,7 +70,7 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 {% if user.is_authenticated %}
                 <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log-out</a></li>
-                <li><a class="dropdown-item" href="#">Favourites</a></li>
+                <li><a class="dropdown-item" href="{% url 'create_testimonial' %}">Create Testimonial</a></li>
                 {% else %}
                 <li><a class="dropdown-item" href="{% url 'account_login' %}">Log-in</a></li>
                 <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>

@@ -12,7 +12,7 @@ from django.urls import reverse_lazy
 from django.utils.text import slugify
 
 
-# Template Views 
+# Template Views
 
 class HomePageView(TemplateView):
     """
@@ -28,7 +28,7 @@ class About(TemplateView):
     template_name = "about.html"
 
 
-#Blog Views
+# Blog Views
 
 class BlogPostList(generic.ListView):
     """
@@ -44,11 +44,15 @@ class BlogPostList(generic.ListView):
 class BlogDetail(View):
     """
     This class will display the blog the user selects from
-    the BlogPostList.  It will also render comments the 
+    the BlogPostList.  It will also render comments the
     user makes
     """
-    
+   
     def get(self, request, slug, *args, **kwargs):
+        """
+        Sets favourites to False and returns the blog
+        in a detailed view
+        """
         queryset = BlogPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.user_comments.filter(
@@ -72,6 +76,14 @@ class BlogDetail(View):
 
 
     def post(self, request, slug, *args, **kwargs):
+        """
+        Takes the BlogPost Object and allows the user
+        to click on an icon to mark it as a favourite
+        and to leave a comment for approval underneath
+        the blog.  Validates the comment and saves it for 
+        approval. 
+
+        """
         queryset = BlogPost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.user_comments.filter(
@@ -108,12 +120,19 @@ class BlogDetail(View):
 
 class CreateTestimonView(CreateView):
     """
-    Creates Testimonial view so that user can create 
+    Allows a user or admin to create
     a testionial on the front end
     """
     template_name = 'create_testimonial.html'
     form_class = CreateTestimonial
-    success_url = reverse_lazy('index')
+
+    def get_success_url(self):
+        """
+        sets the reverse url when user
+        or admin creates a new Testimonial
+        """
+        return reverse('home')
+
 
     def form_valid(self, form):
         """
@@ -124,6 +143,7 @@ class CreateTestimonView(CreateView):
         return super().form_valid(form)
 
 # Favourites Post
+
 
 class Favourites(View):
     """
