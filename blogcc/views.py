@@ -1,7 +1,8 @@
 """Views"""
 
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import TemplateView, ListView, CreateView
+from django.views.generic import TemplateView, ListView
+from django.views.generic import CreateView, UpdateView
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.http import HttpResponseRedirect
 from django.views import generic, View
@@ -173,6 +174,40 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
         
         form = form.save(commit=False)
         form.slug = slugify(form.blog_title)
+        return super().form_valid(form)
+
+
+class BlogUpdate(UserPassesTestMixin, UpdateView):
+    """
+    Admin who is logged in can edit any blogs 
+    that they have created
+    """
+    form = CreateBlogView
+    fields = ['blog_title',
+              'blog_subtitle',
+              'blog_content',
+              'blog_image_1',
+              'blog_image_2',
+              'status']
+    queryset = BlogPost.objects.filter(
+        status=1).order_by('blog_title')
+    
+    template_name = 'blog_review.html'
+    success_url = reverse_lazy('blog')
+
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+
+    def form_valid(self, form):
+        """
+        Validates the form
+        """
+
+        form.save
         return super().form_valid(form)
 
 
