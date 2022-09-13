@@ -2,7 +2,7 @@
 
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, ListView, CreateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.views import generic, View
 from .models import BlogPost
 from .forms import CreateBlog, CreateTestimonial, CreateComment
@@ -39,14 +39,22 @@ class BlogPostList(generic.ListView):
     context_object_name = "bloglist"
 
 
-class CreateBlogView(CreateView):
+class CreateBlogView(UserPassesTestMixin, CreateView):
     """
     Creates blog view so that admin can create a new
     blog on the front end
     """
+    
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+        
     template_name = 'create_blog.html'
     form_class = CreateBlog
     success_url = reverse_lazy('blog')
+    
 
     def form_valid(self, form):
         """
@@ -145,14 +153,14 @@ class CreateTestimonView(CreateView):
 # Admin Only View
 
 
-class AdminOnlyView(LoginRequiredMixin, TemplateView):
+class AdminOnlyView(UserPassesTestMixin, TemplateView):
     """
     Checks to see if the User is a superuser and allows the
     superuser to choose between approving comments, approving
     testimonials or Create a Blog  
     """
 
-    def test_super(self):
+    def test_func(self):
         """
         Checks if the user is the superuser and allows
         only them to view the admin.html page
@@ -160,4 +168,4 @@ class AdminOnlyView(LoginRequiredMixin, TemplateView):
 
         return self.request.user.is_superuser
     
-    template_name = 'admin_only'
+    template_name = 'admin_only.html'
