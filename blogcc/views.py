@@ -246,32 +246,3 @@ class BlogDelete(UserPassesTestMixin, DeleteView):
         """
         return self.request.user.is_superuser
 
-
-class ApproveComments(UserPassesTestMixin, ListView):
-    """
-    Creates a view of the comments to be approved, which 
-    can only be access by admin. This allows admin to 
-    approve comments on the frontend
-    """
-    
-    def test_func(self):
-        """
-        Checks if superuser
-        """
-        return self.request.user.is_superuser
-        
-    template_name = 'approve_comments.html'
-    model = BlogComment
-    queryset = BlogComment.objects.filter(
-        approve=False).order_by('comment_created')
-    context_object_name = 'approval'
-    paginate_by = 3
-
-    def get_context_data(self, **kwargs):
-        """
-        Gets the comments for approval
-        """
-        context = super().get_context_data(**kwargs)
-        context['comments'] = BlogComment.objects.filter(
-            approve=False).order_by('comment_created')
-        return context
