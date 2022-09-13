@@ -139,7 +139,7 @@ class Favourites(View):
         
         return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
 
-# Admin Only View
+# Admin Only Views
 
 
 class CreateBlogView(UserPassesTestMixin, CreateView):
@@ -147,16 +147,22 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
     Creates blog view so that admin can create a new
     blog on the front end
     """
+
+    template_name = 'create_blog.html'
+    form_class = CreateBlog
+
+    def get_success_url(self):
+        """
+        sets the reverse url when 
+        admin creates a new blog
+        """
+        return reverse('blog')
     
     def test_func(self):
         """
         Checks if superuser
         """
         return self.request.user.is_superuser
-
-    template_name = 'create_blog.html'
-    form_class = CreateBlog
-    success_url = reverse_lazy('blog')
     
 
     def form_valid(self, form):
@@ -164,8 +170,9 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
         Validates the form and adds the new blog to the 
         blog.html page
         """
+        
         form = form.save(commit=False)
-        form.slug = slugify(form.blog_subtitle)
+        form.slug = slugify(form.blog_title)
         return super().form_valid(form)
 
 

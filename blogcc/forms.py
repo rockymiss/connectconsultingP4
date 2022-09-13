@@ -37,3 +37,5 @@ class CreateComment(forms.ModelForm):
     class Meta:
         model = BlogComment
         fields = ('comment_body',)
+
+

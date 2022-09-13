@@ -13,7 +13,7 @@ class PostAdmin(SummernoteModelAdmin):
     on the admin panel
 
     """
-
+    
     search_fields = ['blog_title', 'blog_content']
     list_display = ('blog_title',
                     'slug',
