@@ -226,7 +226,6 @@ class BlogUpdate(UserPassesTestMixin, UpdateView):
         """
         Validates the form
         """
-
         form.save
         return super().form_valid(form)
 
@@ -246,3 +245,31 @@ class BlogDelete(UserPassesTestMixin, DeleteView):
         """
         return self.request.user.is_superuser
 
+
+class CommentsToApprove(UserPassesTestMixin, ListView):
+    """
+    Checks to see if user is superuser, gets a list of 
+    Comments made on a blog by user which allows Admin
+    to approve Comments 
+    """
+
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    template_name = 'approve_comments.html'
+    model = BlogComment
+    queryset = BlogComment.objects.filter(
+        approve=False).order_by('comment_created')
+    context_object_name = 'to_approve'
+    
+
+    def get_context_data(self, **kwargs):
+        """
+        Gets the comments to approve
+        """
+        context = super().get_context_data(**kwargs)
+        context['comments'] = BlogComment.objects.filter(approve=False).order_by('-comment_created')
+        return context

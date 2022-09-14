@@ -4,8 +4,17 @@
 
 
 {% block content %}
+<!-- Reviews for Approval -->
 <div>
-<h1>Approve Comments</h1>
-</div>
+      {% for comment in comments %}
+      <h2>{{ comment.name }}</h2>
+      <h2>{{ comment.comment_created }}</h2>
+      <h2>{{ comment.comment_body | linebreaks }}</h2>
+      <h2>{{ comment.approve}}</h2>
+            </div>
+           
+      {% endfor %}
+    </div>
+  </section>
     
 {% endblock %}

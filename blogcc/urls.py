@@ -10,6 +10,7 @@ urlpatterns = [
     path('blog_detail/<slug:slug>/', views.BlogDetail.as_view(), name="blog_detail"),
     path('create_testimonial/', views.CreateTestimonView.as_view(), name="create_testimonial"),
     path('blog_favourite/<slug:slug>/', views.Favourites.as_view(), name="blog_favourite"),
-    path('blog_review/<slug:slug>', views.BlogUpdate.as_view(), name="blog_review"),
-    path('blog_delete/<slug:slug>', views.BlogDelete.as_view(), name="blog_delete"),
+    path('blog_review/<slug:slug>/', views.BlogUpdate.as_view(), name="blog_review"),
+    path('blog_delete/<slug:slug>/', views.BlogDelete.as_view(), name="blog_delete"),
+    path('approve_comments/>', views.CommentsToApprove.as_view(), name="approve_comments"),
 ]
