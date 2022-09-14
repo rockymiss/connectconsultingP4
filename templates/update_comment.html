@@ -6,11 +6,15 @@
 {% block content %}
 <div>
 <h1>Approve Comment</h1>
-<form method="POST" enctype="multipart/form-data">
+<form method="post" class="text-center">
     {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Submit">
-</form>
+    <p> Are you sure {{ user.username }}, that you would like to <strong>approve</strong> this comment? {{ comment.comment_body }}</p>
+    <input class="btn btn-danger btn-lg" type="submit" value="Yes">
+    <div><br>
+        <a href="#">
+            <button type="button" class="btn-success btn-sm">Go Back</button></a>
+        </div>
+    </div>
 </div>
     
 {% endblock %}

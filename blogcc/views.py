@@ -1,6 +1,6 @@
 """Views"""
 
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import TemplateView, ListView
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
@@ -275,29 +275,45 @@ class ReviewComments(UserPassesTestMixin, ListView):
         return context
 
 
-class ApproveComment(UserPassesTestMixin, UpdateView):
+class ApproveComment(UserPassesTestMixin, View):
     """
     Admin who is logged in can edit any comments 
     that a user has created and mark them approved
     """
-    model = BlogComment
-    fields = ['post',
-              'name',
-              'comment_created',
-              'comment_body',
-              'approve',
-              '']
-    queryset = BlogComment.objects.filter(
-        approve=False).order_by('comment_created')
-    
-    template_name = 'review_comments.html'
-    success_url = reverse_lazy('review_comments')
 
     def test_func(self):
         """
         Checks if superuser
         """
         return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets 
+        """
+        comment = get_object_or_404(BlogComment, pk=pk)
+        context = {
+            'comment': comment,
+        }
+
+        return render(
+            request,
+            'update_comment.html',
+            context
+        )
+    
+    def post(self, request, pk, *args, **kwargs):
+        """
+        get
+        """
+        comment = get_object_or_404(BlogComment, pk=pk)
+        post = comment.post
+
+        if request.method == "POST":
+            post.approve = True
+            post.save()
+
+        return redirect('review_comments.html', slug=post.slug)
 
 
 

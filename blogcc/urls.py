@@ -13,4 +13,5 @@ urlpatterns = [
     path('blog_review/<slug:slug>/', views.BlogUpdate.as_view(), name="blog_review"),
     path('blog_delete/<slug:slug>/', views.BlogDelete.as_view(), name="blog_delete"),
     path('review_comments/', views.ReviewComments.as_view(), name="review_comments"),
+    path('update_comment/<int:pk>/', views.ApproveComment.as_view(), name="update_comment"),
 ]
