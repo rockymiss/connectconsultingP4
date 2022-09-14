@@ -274,3 +274,31 @@ class ReviewComments(UserPassesTestMixin, ListView):
         context['comments'] = BlogComment.objects.filter(approve=False).order_by('-comment_created')
         return context
 
+
+class ApproveComment(UserPassesTestMixin, UpdateView):
+    """
+    Admin who is logged in can edit any comments 
+    that a user has created and mark them approved
+    """
+    model = BlogComment
+    fields = ['post',
+              'name',
+              'comment_created',
+              'comment_body',
+              'approve',
+              '']
+    queryset = BlogComment.objects.filter(
+        approve=False).order_by('comment_created')
+    
+    template_name = 'review_comments.html'
+    success_url = reverse_lazy('review_comments')
+
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+
+
+
