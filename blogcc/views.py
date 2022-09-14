@@ -259,7 +259,7 @@ class CommentsToApprove(UserPassesTestMixin, ListView):
         """
         return self.request.user.is_superuser
 
-    template_name = 'approve_comments.html'
+    template_name = 'review_comments.html'
     model = BlogComment
     queryset = BlogComment.objects.filter(
         approve=False).order_by('comment_created')

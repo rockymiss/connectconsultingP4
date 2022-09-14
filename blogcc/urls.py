@@ -12,5 +12,5 @@ urlpatterns = [
     path('blog_favourite/<slug:slug>/', views.Favourites.as_view(), name="blog_favourite"),
     path('blog_review/<slug:slug>/', views.BlogUpdate.as_view(), name="blog_review"),
     path('blog_delete/<slug:slug>/', views.BlogDelete.as_view(), name="blog_delete"),
-    path('approve_comments/>', views.CommentsToApprove.as_view(), name="approve_comments"),
+    path('review_comments/', views.CommentsToApprove.as_view(), name="review_comments"),
 ]
