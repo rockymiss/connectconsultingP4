@@ -277,19 +277,19 @@ class ReviewComments(UserPassesTestMixin, ListView):
 
 class ApproveComment(UserPassesTestMixin, View):
     """
-    Admin who is logged in can edit any comments 
-    that a user has created and mark them approved
+    Admin who is logged in can edit any approve comments
+    that a user has created.
     """
 
     def test_func(self):
         """
-        Checks if superuser
+        Checks if user is a superuser
         """
         return self.request.user.is_superuser
 
     def get(self, request, pk, *args, **kwargs):
         """
-        gets 
+        gets the object instance's comment and assigns primary key
         """
         comment = get_object_or_404(BlogComment, pk=pk)
         context = {
@@ -301,20 +301,17 @@ class ApproveComment(UserPassesTestMixin, View):
             'update_comment.html',
             context
         )
-    
+   
     def post(self, request, pk, *args, **kwargs):
         """
-        get
+        gets the comment the user made and checks 
+        if the comment has been approved.  Admin can
+        the approve the comment
         """
+        
         comment = get_object_or_404(BlogComment, pk=pk)
-        post = comment.post
-
         if request.method == "POST":
-            post.approve = True
-            post.save()
+            comment.approve = True
+            comment.save()
 
-        return redirect('review_comments.html', slug=post.slug)
-
-
-
-
+        return redirect('review_comments')
