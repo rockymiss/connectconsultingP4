@@ -6,10 +6,10 @@ from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.http import HttpResponseRedirect
 from django.views import generic, View
-from .models import BlogPost, BlogComment
-from .forms import CreateBlog, CreateTestimonial, CreateComment
 from django.urls import reverse_lazy
 from django.utils.text import slugify
+from .models import BlogPost, BlogComment
+from .forms import CreateBlog, CreateTestimonial, CreateComment
 
 
 # Template Views
@@ -47,7 +47,7 @@ class BlogDetail(View):
     the BlogPostList.  It will also render comments the
     user makes
     """
-   
+
     def get(self, request, slug, *args, **kwargs):
         """
         Sets favourites to False and returns the blog
@@ -74,14 +74,13 @@ class BlogDetail(View):
             },
         )
 
-
     def post(self, request, slug, *args, **kwargs):
         """
         Takes the BlogPost Object and allows the user
         to click on an icon to mark it as a favourite
         and to leave a comment for approval underneath
-        the blog.  Validates the comment and saves it for 
-        approval. 
+        the blog.  Validates the comment and saves it for
+        approval.
 
         """
         queryset = BlogPost.objects.filter(status=1)
@@ -133,7 +132,6 @@ class CreateTestimonView(CreateView):
         """
         return reverse('home')
 
-
     def form_valid(self, form):
         """
         Validates the form and adds the new testimonial to the
@@ -151,13 +149,17 @@ class Favourites(View):
     """
 
     def post(self, request, slug):
+        """
+        checks if user has id and can add or remove likes
+        reloads blog_detail page
+        """
         post = get_object_or_404(BlogPost, slug=slug)
 
         if post.blog_favourite.filter(id=request.user.id).exists():
             post.blog_favourite.remove(request.user)
         else:
             post.blog_favourite.add(request.user)
-        
+
         return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
 
 # Admin Only Views
@@ -174,24 +176,23 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
 
     def get_success_url(self):
         """
-        sets the reverse url when 
+        sets the reverse url when
         admin creates a new blog
         """
         return reverse('blog')
-    
+
     def test_func(self):
         """
         Checks if superuser
         """
         return self.request.user.is_superuser
-    
 
     def form_valid(self, form):
         """
-        Validates the form and adds the new blog to the 
+        Validates the form and adds the new blog to the
         blog.html page
         """
-        
+
         form = form.save(commit=False)
         form.slug = slugify(form.blog_title)
         return super().form_valid(form)
@@ -199,7 +200,7 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
 
 class BlogUpdate(UserPassesTestMixin, UpdateView):
     """
-    Admin who is logged in can edit any blogs 
+    Admin who is logged in can edit any blogs
     that they have created
     """
     form = CreateBlogView
@@ -211,7 +212,7 @@ class BlogUpdate(UserPassesTestMixin, UpdateView):
               'status']
     queryset = BlogPost.objects.filter(
         status=1).order_by('blog_title')
-    
+
     template_name = 'blog_review.html'
     success_url = reverse_lazy('blog')
 
@@ -221,17 +222,17 @@ class BlogUpdate(UserPassesTestMixin, UpdateView):
         """
         return self.request.user.is_superuser
 
-
     def form_valid(self, form):
         """
         Validates the form
         """
-        form.save
+
         return super().form_valid(form)
+
 
 class BlogDelete(UserPassesTestMixin, DeleteView):
     """
-    Admin who is logged in can delete any blogs 
+    Admin who is logged in can delete any blogs
     that they have created
     """
     model = BlogPost
@@ -248,9 +249,9 @@ class BlogDelete(UserPassesTestMixin, DeleteView):
 
 class ReviewComments(UserPassesTestMixin, ListView):
     """
-    Checks to see if user is superuser, gets a list of 
+    Checks to see if user is superuser, gets a list of
     Comments made on a blog by user which allows Admin
-    to approve Comments 
+    to approve Comments
     """
 
     def test_func(self):
@@ -264,14 +265,15 @@ class ReviewComments(UserPassesTestMixin, ListView):
     queryset = BlogComment.objects.filter(
         approve=False).order_by('comment_created')
     context_object_name = 'to_approve'
-    
 
     def get_context_data(self, **kwargs):
         """
         Gets the comments to approve
         """
         context = super().get_context_data(**kwargs)
-        context['comments'] = BlogComment.objects.filter(approve=False).order_by('-comment_created')
+        context[
+                'comments'] = BlogComment.objects.filter(
+                    approve=False).order_by('-comment_created')
         return context
 
 
@@ -301,14 +303,14 @@ class ApproveComment(UserPassesTestMixin, View):
             'update_comment.html',
             context
         )
-   
+
     def post(self, request, pk, *args, **kwargs):
         """
-        gets the comment the user made and checks 
+        gets the comment the user made and checks
         if the comment has been approved.  Admin can
         the approve the comment
         """
-        
+
         comment = get_object_or_404(BlogComment, pk=pk)
         if request.method == "POST":
             comment.approve = True
