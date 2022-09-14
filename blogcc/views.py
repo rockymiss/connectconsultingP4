@@ -317,3 +317,42 @@ class ApproveComment(UserPassesTestMixin, View):
             comment.save()
 
         return redirect('review_comments')
+
+
+class DeleteComment(UserPassesTestMixin, DeleteView):
+    """
+    Checks to see if user is admin and allows admin
+    to delete a comment made by the user
+    """
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the object instance's comment and assigns primary key
+        """
+        comment = get_object_or_404(BlogComment, pk=pk)
+        context = {
+            'comment': comment,
+        }
+
+        return render(
+            request,
+            'delete_comment.html',
+            context
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+        """
+        gets the comment the user made and checks
+        if the comment has been approved.  Admin can
+        then delete the comment
+        """
+
+        comment = get_object_or_404(BlogComment, pk=pk)
+        comment.delete()
+
+        return redirect('review_comments')

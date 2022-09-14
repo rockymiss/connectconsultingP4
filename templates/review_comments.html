@@ -13,7 +13,7 @@
       <h2>{{ comment.approve}}</h2>
       <hr>
       <a href="{% url 'update_comment' comment.pk %}" class="btn btn-primary">Approve Comment</a>
-      <a href="#" class="btn btn-primary">Delete Comment</a>
+      <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-primary">Delete Comment</a>
             </div>
            
       {% endfor %}

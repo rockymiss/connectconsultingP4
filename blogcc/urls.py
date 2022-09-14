@@ -24,4 +24,6 @@ urlpatterns = [
          views.ReviewComments.as_view(), name="review_comments"),
     path('update_comment/<int:pk>/',
          views.ApproveComment.as_view(), name="update_comment"),
+    path('delete_comment/<int:pk>/',
+         views.DeleteComment.as_view(), name="delete_comment"),
 ]
