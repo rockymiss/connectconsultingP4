@@ -62,7 +62,7 @@ class PostTestimonal(SummernoteModelAdmin):
                     'date_created')
     list_filter = ('date_created', 'approve',)
     summernote_fields = ('content')
-    actions = ['approve_testimonials']
+    actions = ['approve']
 
     def testimonial_approve(self, request, queryset):
         """

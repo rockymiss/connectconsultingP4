@@ -8,7 +8,7 @@ from django.http import HttpResponseRedirect
 from django.views import generic, View
 from django.urls import reverse_lazy
 from django.utils.text import slugify
-from .models import BlogPost, BlogComment
+from .models import BlogPost, BlogComment, Testimonial
 from .forms import CreateBlog, CreateTestimonial, CreateComment
 
 
