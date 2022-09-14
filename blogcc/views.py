@@ -246,7 +246,7 @@ class BlogDelete(UserPassesTestMixin, DeleteView):
         return self.request.user.is_superuser
 
 
-class CommentsToApprove(UserPassesTestMixin, ListView):
+class ReviewComments(UserPassesTestMixin, ListView):
     """
     Checks to see if user is superuser, gets a list of 
     Comments made on a blog by user which allows Admin
@@ -273,3 +273,4 @@ class CommentsToApprove(UserPassesTestMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['comments'] = BlogComment.objects.filter(approve=False).order_by('-comment_created')
         return context
+
