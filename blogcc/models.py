@@ -77,7 +77,7 @@ class Testimonial(models.Model):
         User,
         on_delete=models.CASCADE,
         related_name="testim_user")
-    company_name = models.CharField(max_length=220, unique=True)
+    company_name = models.CharField(max_length=220, unique=False)
     content = models.TextField()
     approve = models.BooleanField(default=False)
     date_created = models.DateTimeField(auto_now_add=True)
