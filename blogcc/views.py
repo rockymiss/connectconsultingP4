@@ -37,7 +37,7 @@ class BlogPostList(generic.ListView):
     """
     model = BlogPost
     queryset = BlogPost.objects.filter(status=1).order_by('-blog_created_on')
-    template_name = 'blog.html'
+    template_name = 'blog/blog.html'
     paginate_by = 6
     context_object_name = "bloglist"
 
@@ -65,7 +65,7 @@ class BlogDetail(View):
 
         return render(
             request,
-            "blog_detail.html",
+            "blog/blog_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -105,7 +105,7 @@ class BlogDetail(View):
 
         return render(
             request,
-            "blog_detail.html",
+            "blog/blog_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -189,7 +189,7 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
     blog on the front end
     """
 
-    template_name = 'create_blog.html'
+    template_name = 'blog/create_blog.html'
     form_class = CreateBlog
 
     def get_success_url(self):
@@ -231,7 +231,7 @@ class BlogUpdate(UserPassesTestMixin, UpdateView):
     queryset = BlogPost.objects.filter(
         status=1).order_by('blog_title')
 
-    template_name = 'blog_review.html'
+    template_name = 'blog/blog_review.html'
     success_url = reverse_lazy('blog')
 
     def test_func(self):
@@ -255,7 +255,7 @@ class BlogDelete(UserPassesTestMixin, DeleteView):
     """
     model = BlogPost
     context_object_name = "bloglist"
-    template_name = 'blog_delete.html'
+    template_name = 'blog/blog_delete.html'
     success_url = reverse_lazy('blog')
 
     def test_func(self):
@@ -484,4 +484,4 @@ class DeleteTestimonial(UserPassesTestMixin, DeleteView):
         testimonial = get_object_or_404(Testimonial, pk=pk)
         testimonial.delete()
 
-        return redirect('review_testimonials')
+        return redirect('review_testimonial')

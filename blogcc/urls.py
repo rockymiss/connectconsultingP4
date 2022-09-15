@@ -31,6 +31,6 @@ urlpatterns = [
     path('testimonial/', views.TestimonList.as_view(), name="testimonial"),
     path('approve_testimonial/<int:pk>/',
          views.ApproveTestimon.as_view(), name="approve_testimonial"),
-    path('delete_testimonial/<int:pk>/',
-         views.DeleteTestimonial.as_view, name="delete_testimonial")
+    path('delete_testimonial/<int:pk>/', 
+         views.DeleteTestimonial.as_view(), name="delete_testimonial")
 ]
