@@ -27,5 +27,6 @@ urlpatterns = [
     path('delete_comment/<int:pk>/',
          views.DeleteComment.as_view(), name="delete_comment"),
     path('testimonial_reivew/<int:pk>/', 
-         views.UpdateTestimonial.as_view(), name="testimonial_review")
+         views.UpdateTestimonial.as_view(), name="testimonial_review"),
+    path('testimonial/', views.TestimonList.as_view(), name="testimonial"),
 ]
