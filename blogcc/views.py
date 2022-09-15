@@ -158,42 +158,6 @@ class CreateTestimonView(UserPassesTestMixin, CreateView):
         return super().form_valid(form)
 
 
-class UpdateTestimonial(UpdateView):
-    """
-    Logged in users can update Testimonials they have created
-    The Testimonial will then be sent again for approval by
-    admin
-    """
-
-    model = Testimonial
-    fields = {
-        'post',
-        'comment_body', 
-    }
-    template_name = 'testimonial_review.html'
-    success_url = reverse_lazy('home')
-
-    def test_func(self):
-        """
-        Checks if user
-        """
-        return self.request.user.is_user
-    
-    def form_valid(self, form):
-        """
-        Logged in user is form author
-        """
-        form.instance.name = self.request.user
-        form.instance.approve = False
-        messages.success(
-            self.request, 'You have updated your Testimonial, it will be sent for review'
-        )
-        form.save()
-        return super().form_valid(form)
-    
-
-
-
 # Favourites Post
 
 
@@ -333,7 +297,7 @@ class ReviewComments(UserPassesTestMixin, ListView):
 
 class ApproveComment(UserPassesTestMixin, View):
     """
-    Admin who is logged in can edit any approve comments
+    Admin who is logged in can edit and approve comments
     that a user has created.
     """
 
@@ -354,7 +318,7 @@ class ApproveComment(UserPassesTestMixin, View):
 
         return render(
             request,
-            'update_comment.html',
+            'approve_comment.html',
             context
         )
 
@@ -410,3 +374,114 @@ class DeleteComment(UserPassesTestMixin, DeleteView):
         comment.delete()
 
         return redirect('review_comments')
+
+
+class ReviewTestimonials(UserPassesTestMixin, ListView):
+    """
+    Checks to see if user is superuser, gets a list of
+    Comments made on a blog by user which allows Admin
+    to approve Comments
+    """
+
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    template_name = 'review_testimonial.html'
+    model = Testimonial
+    queryset = Testimonial.objects.filter(
+        approve=False).order_by('-date_created')
+    context_object_name = 'test_approve'
+
+    def get_context_data(self, **kwargs):
+        """
+        Gets the testimonials to approve
+        """
+        context = super().get_context_data(**kwargs)
+        context[
+                'testimonials'] = Testimonial.objects.filter(
+                    approve=False).order_by('-date_created')
+        return context
+
+
+class ApproveTestimon(UserPassesTestMixin, View):
+    """
+    Admin who is logged in can  approve testimonials
+    that a user has created.
+    """
+
+    def test_func(self):
+        """
+        Checks if user is a superuser
+        """
+        return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the object instance's comment and assigns primary key
+        """
+        testimonial = get_object_or_404(Testimonial, pk=pk)
+        context = {
+            'testimonial': testimonial,
+        }
+
+        return render(
+            request,
+            'approve_testimonial.html',
+            context
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+        """
+        gets the content the user made and checks
+        if the content has been approved.  Admin can
+        then approve
+        """
+
+        testimonial = get_object_or_404(Testimonial, pk=pk)
+        if request.method == "POST":
+            testimonial.approve = True
+            testimonial.save()
+
+        return redirect('review_testimonial')
+
+
+class DeleteTestimonial(UserPassesTestMixin, DeleteView):
+    """
+    Checks to see if user is admin and allows admin
+    to delete a testimonial made by the user
+    """
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
+    def get(self, request, pk, *args, **kwargs):
+        """
+        gets the object instance's comment and assigns primary key
+        """
+        testimonial = get_object_or_404(Testimonial, pk=pk)
+        context = {
+            'testimonial': testimonial,
+        }
+
+        return render(
+            request,
+            'delete_testimonial.html',
+            context
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+        """
+        gets the content the user made and checks
+        if the content has been approved.  Admin can
+        then delete the content
+        """
+
+        testimonial = get_object_or_404(Testimonial, pk=pk)
+        testimonial.delete()
+
+        return redirect('review_testimonials')
