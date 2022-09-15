@@ -46,9 +46,8 @@
                   Testimonals
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">View Testimonial</a></li>
-                  <li><a class="dropdown-item" href="{% url 'create_testimonial' %}">Create Testimonial</a></li>
-                  <li><a class="dropdown-item" href="#">Review Testimonial</a></li>
+                  <li><a class="dropdown-item" href="{% url 'testimonial' %}">View Testimonials</a></li>
+                  <li><a class="dropdown-item" href="{% url 'create_testimonial' %}">Create Testimonial</a>
                   {% if user.is_superuser %}
                   <li><a class="dropdown-item" href="#">Approve Testimonials</a></li>
                   {% endif %}
