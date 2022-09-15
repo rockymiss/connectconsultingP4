@@ -118,6 +118,16 @@ class BlogDetail(View):
 
 # Testimonial Views
 
+class TestimonList(generic.ListView):
+    """
+    Creates a list of testimonials using the Testimonial Model
+    """
+    model = Testimonial
+    queryset = Testimonial.objects.filter(approve=True).order_by('-date_created')
+    template_name = 'testimonial.html'
+    paginate_by = 6
+    context_object_name = "testlist"
+
 class CreateTestimonView(CreateView):
     """
     Allows a user or admin to create
