@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>View Messages</title>
+{% endblock %}
+
+
+{% block content %}
+<!-- Reviews for Approval -->
+<div>
+      {% for mess in getmessage %}
+      <h2>{{ mess.first_name }} {{ mess.last_name }}</h2>
+      <h2>{{ mess.email }}</h2>
+      <h2>{{ mess.message | linebreaks }}</h2>
+      <h2>{{ mess.date_created }}</h2>
+      <hr>
+      <a href="{% url 'message_confirm_delete' mess.pk %}" class="btn btn-primary">Delete</a>
+            </div>
+           
+      {% endfor %}
+    </div>
+  </section>
+    
+{% endblock %}
