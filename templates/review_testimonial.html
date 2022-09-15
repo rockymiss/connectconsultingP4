@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>Review Testimonial</title>
+{% endblock %}
+
+
+{% block content %}
+<!-- Reviews for Approval -->
+<div>
+      {% for testimonial in testimonials %}
+      <h2>{{ testimonial.name }}</h2>
+      <h2>{{ testimonial.company_name }}</h2>
+      <h2>{{ testimonial.content | linebreaks }}</h2>
+      <h2>{{ testimonial.approve }}</h2>
+      <hr>
+      <a href="{% url 'approve_testimonial' testimonial.pk %}" class="btn btn-primary">Approve</a>
+      <a href="{% url 'delete_testimonial' testimonial.pk %}" class="btn btn-primary">Delete</a>
+            </div>
+           
+      {% endfor %}
+    </div>
+  </section>
+    
+{% endblock %}
