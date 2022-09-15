@@ -41,6 +41,20 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'about' %}">About</a>
               </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Testimonals
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">View Testimonial</a></li>
+                  <li><a class="dropdown-item" href="{% url 'create_testimonial' %}">Create Testimonial</a></li>
+                  <li><a class="dropdown-item" href="#">Review Testimonial</a></li>
+                  {% if user.is_superuser %}
+                  <li><a class="dropdown-item" href="#">Approve Testimonials</a></li>
+                  {% endif %}
+  
+              
+                </ul>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Blog</a>
               </li>
