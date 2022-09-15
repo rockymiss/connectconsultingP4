@@ -5,6 +5,7 @@ from django.views.generic import TemplateView, ListView
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from django.views import generic, View
 from django.urls import reverse_lazy
 from django.utils.text import slugify
@@ -139,6 +140,43 @@ class CreateTestimonView(CreateView):
         """
         form = form.save(commit=False)
         return super().form_valid(form)
+
+
+class UpdateTestimonial(UpdateView):
+    """
+    Logged in users can update Testimonials they have created
+    The Testimonial will then be sent again for approval by
+    admin
+    """
+
+    model = Testimonial
+    fields = {
+        'post',
+        'comment_body', 
+    }
+    template_name = 'testimonial_review.html'
+    success_url = reverse_lazy('home')
+
+    def test_func(self):
+        """
+        Checks if user
+        """
+        return self.request.user.is_user
+    
+    def form_valid(self, form):
+        """
+        Logged in user is form author
+        """
+        form.instance.name = self.request.user
+        form.instance.approve = False
+        messages.success(
+            self.request, 'You have updated your Testimonial, it will be sent for review'
+        )
+        form.save()
+        return super().form_valid(form)
+    
+
+
 
 # Favourites Post
 
