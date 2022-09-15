@@ -9,6 +9,7 @@ class ContactUs(models.Model):
     """
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    email = models.EmailField(default='email@gmail.com')
     message = models.TextField(max_length=500)
     date_created = models.DateTimeField(auto_now_add=True)
 
