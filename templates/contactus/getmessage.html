@@ -5,18 +5,25 @@
 
 {% block content %}
 <!-- Reviews for Approval -->
-<div>
+
+    
+    <div class="accordion" id="accordionExample">
       {% for mess in getmessage %}
-      <h2>{{ mess.first_name }} {{ mess.last_name }}</h2>
-      <h2>{{ mess.email }}</h2>
-      <h2>{{ mess.message | linebreaks }}</h2>
-      <h2>{{ mess.date_created }}</h2>
-      <hr>
-      <a href="{% url 'message_confirm_delete' mess.pk %}" class="btn btn-primary">Delete</a>
-            </div>
-           
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Message from {{ mess.first_name }} {{ mess.last_name }} on {{ mess.date_created }}
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>{{ mess.email }}</strong> {{ mess.message | linebreaks }}</code>
+            <p><a href="{% url 'message_confirm_delete' mess.pk %}" class="btn btn-primary">Delete</a></p>
+          </div>
+        </div>
+      </div>
       {% endfor %}
-    </div>
-  </section>
+      </div>
+      
     
 {% endblock %}
