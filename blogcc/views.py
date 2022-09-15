@@ -128,13 +128,19 @@ class TestimonList(generic.ListView):
     paginate_by = 6
     context_object_name = "testlist"
 
-class CreateTestimonView(CreateView):
+class CreateTestimonView(UserPassesTestMixin, CreateView):
     """
     Allows a user or admin to create
     a testionial on the front end
     """
     template_name = 'create_testimonial.html'
     form_class = CreateTestimonial
+
+    def test_func(self):
+        """
+        Checks if user
+        """
+        return self.request.user.is_authenticated
 
     def get_success_url(self):
         """
