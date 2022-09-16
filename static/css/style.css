@@ -89,7 +89,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 0 1em;
-  text-align: center;
+  text-align: left;
 }
 
 .index-content-inside {
