@@ -12,13 +12,28 @@
     background-color: var(--greyfive);
   }
 
+.yellow-bg {
+  background-color: var(--crayolaYellow);
+}
+
+/* Main */
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--black);
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
 body {
    
-    height: 100%;
     display: flex;
     flex-direction: column;
     min-height: 100vh;    
   }
+
 
 /* styles for body of templates */
 .main-content {
@@ -27,8 +42,8 @@ body {
   background-image: url(https://res.cloudinary.com/rockymiss/image/upload/v1662305731/connectconsulting/picwish_sx58rf.png);
 }
 
-/*Header nav bar styles*/
 
+/*Header nav bar styles*/
 nav, footer {
     padding: 0;
     margin: 0;
@@ -44,8 +59,8 @@ nav, footer {
   padding: 0 1rem !important;
 }
 
-/*Footer styles*/
 
+/*Footer styles*/
 .footer-item {
     justify-content: space-between;
   }
@@ -59,18 +74,13 @@ footer {
     justify-content: space-around;
   }
 
-/*Logo*/
+/* Logo */
   .connect-logo {
 
     width: 280px;
     padding: 0;
 
   }
-
-
-
-
-
 /*Hides elements when not needed*/  
 .hide {
     display: none;
