@@ -2,15 +2,17 @@
 <title>Create Testimonial</title>
 {% endblock %}
 
+{% load crispy_forms_tags %}
+
 
 {% block content %}
-<div>
+<div class="index-content background">
       <!--spacer to push page below navbar-->
       <div class="spacer py-5"></div>
 <h1>Create your Testimonial</h1>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form.as_p}}
+    {{ form|crispy}}
     <input type="submit" value="Submit">
 </form>
 </div>
