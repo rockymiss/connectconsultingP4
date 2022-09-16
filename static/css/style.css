@@ -70,7 +70,7 @@ footer {
 /* Logo */
   .connect-logo {
 
-    width: 280px;
+    width: 180px;
     padding: 0;
 
   }
@@ -78,6 +78,15 @@ footer {
 .hide {
     display: none;
 }
+
+/*Responsiveness*/
+
+/* @media screen and (min-width: 270px) {
+  .connect-logo {
+
+   
+
+} */
 
 
 
