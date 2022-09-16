@@ -125,7 +125,7 @@ class TestimonList(generic.ListView):
     model = Testimonial
     queryset = Testimonial.objects.filter(approve=True).order_by('-date_created')
     template_name = 'testimonial.html'
-    paginate_by = 6
+    paginate_by = 3
     context_object_name = "testlist"
 
 class CreateTestimonView(UserPassesTestMixin, CreateView):
