@@ -6,6 +6,8 @@
 {% block content %}
 <!-- Reviews for Approval -->
 <div>
+    <!--spacer to push page below navbar-->
+    <div class="spacer py-5"></div>
       {% for testimonial in testimonials %}
       <h2>{{ testimonial.name }}</h2>
       <h2>{{ testimonial.company_name }}</h2>
