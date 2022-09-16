@@ -72,17 +72,15 @@ footer {
     flex-shrink: 0;
   }
   
-/* over write bootstrap footer style */
 .d-flex.align-content-end {
     justify-content: space-around;
   }
 
-/* Logo */
+/* Logo and images*/
   .connect-logo {
 
     width: 180px;
     padding: 0;
-
   }
 
 /*Content Styles*/
@@ -91,10 +89,17 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 0 1em;
+  text-align: center;
 }
 
 .index-content-inside {
   padding-top: 1em;
+}
+
+/*About Page*/
+
+.heading-about {
+  text-align: center;
 }
 
 
