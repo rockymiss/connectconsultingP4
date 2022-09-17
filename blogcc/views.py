@@ -38,7 +38,7 @@ class BlogPostList(generic.ListView):
     model = BlogPost
     queryset = BlogPost.objects.filter(status=1).order_by('-blog_created_on')
     template_name = 'blog/blog.html'
-    paginate_by = 6
+    paginate_by = 3
     context_object_name = "bloglist"
 
 
