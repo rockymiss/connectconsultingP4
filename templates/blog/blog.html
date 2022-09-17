@@ -4,16 +4,16 @@
 
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid background index-content">
     <!--spacer to push page below navbar-->
     <div class="spacer py-5"></div>
     <div class="row">
         
-        <div class="col-12 mt-3 left">
-            <div class="row">
+        <div class="col-xl-12 col-lg-6 mt-3 justify-content-center">
+            <div class="row justify-content-around">
                 {% for blog in bloglist %}
 
-            <div class="card" style="width: 18rem;">
+            <div class="card m-3" style="width: 18rem;">
                 {% if "placeholder" in blog.blog_image_1.url %}
                 <img class="card-img-top hide">
                 {% else %}
@@ -36,7 +36,7 @@
             </div>
 
               <!--Pagination for blog list -->
-              {% if forloop.counter|divisibleby:3 %}
+              {% if forloop.counter|divisibleby:4 %}
             
             <div class="row">
                 {% endif %}
@@ -46,8 +46,6 @@
         </div>
     </div>
 </div>
-</div>
-
 {% if is_paginated %}
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
@@ -60,6 +58,9 @@
 
     </ul>
   </nav>
+</div>
+
+
   {% endif %}
 </div>
 
