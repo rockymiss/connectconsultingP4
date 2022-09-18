@@ -6,11 +6,10 @@
     --white: #FCFCFC;
     --crayolaYellow: #FFFFAB;
     --greyfive: #e2dbdb;
-    --greytrans: #00e2dbdb;
   }
 
 .grey-bg {
-    background-color: var(--greyfive);
+    background-color: var(--greyfive) !important;
   }
 
 .grey-bg-t {
