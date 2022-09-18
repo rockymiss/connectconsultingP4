@@ -25,18 +25,21 @@
                   <p class="card-text">Author: {{ blog.author }}</p>
                   <p class="card-text">Created on: {{ blog.blog_created_on }} <i class="fa-regular fa-star"></i>
                     {{ post.number_of_favourites }}</p></p>
-                    <span>
-                      <a href="{% url 'blog_detail' blog.slug %}" class="btn btn-primary">View Blog</a>
-                      {% if user.is_superuser %}
-                        <a href="{% url 'blog_review' blog.slug %}" class="btn btn-primary">Edit</a>
-                        <a href="{% url 'blog_delete' blog.slug %}" class="btn btn-primary">Delete</a>
-                      {% endif %}
-                      </span>
+                    
                 </div>
+                <div class="row align-self-center pb-1">
+                  <span pb-0>
+                    <a href="{% url 'blog_detail' blog.slug %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Blog</a>
+                    {% if user.is_superuser %}
+                      <a href="{% url 'blog_review' blog.slug %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Edit</a>
+                      <a href="{% url 'blog_delete' blog.slug %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
+                    {% endif %}
+                    </span>
+                  </div>
             </div>
 
               <!--Pagination for blog list -->
-              {% if forloop.counter|divisibleby:4 %}
+              {% if forloop.counter|divisibleby:3 %}
             
             <div class="row">
                 {% endif %}
@@ -50,10 +53,10 @@
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
       {% if page_obj.has_previous %} 
-      <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a></li>
+      <li class="p-3"><a href="?page={{ page_obj.previous_page_number }}" class="page-link grey-bg border border-dark rounded text-dark p-1">&laquo; PREV</a></li>
         {% endif %}
         {% if page_obj.has_next %}
-        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a></li>
+        <li class="p-3"><a href="?page={{ page_obj.next_page_number }}" class="page-link grey-bg border border-dark rounded text-dark p-1">NEXT &raquo;</a></li>
         {% endif %}
 
     </ul>
