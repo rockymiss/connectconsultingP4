@@ -11,6 +11,7 @@ from django.urls import reverse_lazy
 from django.utils.text import slugify
 from .models import BlogPost, BlogComment, Testimonial
 from .forms import CreateBlog, CreateTestimonial, CreateComment
+from django.contrib import messages
 
 
 # Template Views
@@ -63,6 +64,7 @@ class BlogDetail(View):
         if post.blog_favourite.filter(id=self.request.user.id).exists():
             blog_favourite = True
 
+
         return render(
             request,
             "blog/blog_detail.html",
@@ -100,6 +102,7 @@ class BlogDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            
         else:
             comment_form = CreateComment()
 
@@ -147,7 +150,7 @@ class CreateTestimonView(UserPassesTestMixin, CreateView):
         sets the reverse url when user
         or admin creates a new Testimonial
         """
-        return reverse('home')
+        return reverse('create_testimonial')
 
     def form_valid(self, form):
         """
@@ -155,7 +158,13 @@ class CreateTestimonView(UserPassesTestMixin, CreateView):
         index.html page
         """
         form = form.save(commit=False)
+        messages.success(self.request,
+                         'Thank you, your Testimonial has\
+                         been sent for approval')
         return super().form_valid(form)
+
+
+        
 
 
 # Favourites Post
