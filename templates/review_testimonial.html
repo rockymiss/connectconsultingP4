@@ -23,8 +23,8 @@
   </h2>
   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
     <div class="accordion-body">{{ testimonial.content | linebreaks }}</code>
-      <p><a href="{% url 'approve_testimonial' testimonial.pk %}" class="btn btn-primary">Approve</a>
-        <a href="{% url 'delete_testimonial' testimonial.pk %}" class="btn btn-primary">Delete</a></p>
+      <p><a href="{% url 'approve_testimonial' testimonial.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve</a>
+        <a href="{% url 'delete_testimonial' testimonial.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a></p>
     </div>
   </div>
 </div>
