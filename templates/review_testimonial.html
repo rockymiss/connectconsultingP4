@@ -11,14 +11,14 @@
 <!-- Testimonials for Approval -->
 
     
-<div class="accordion" id="accordionExample">
+<div class="accordion index-content" id="accordionExample">
   <!--spacer to push page below navbar-->
 <div class="spacer py-5"></div>
 {% for testimonial in testimonials %}
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingOne">
-    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      Message from: <strong> {{ testimonial.name }}, {{ testimonial.company_name }}, </strong> 
+    <button class="accordion-button background-grad" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      Message from:- <strong> {{ testimonial.name }}, {{ testimonial.company_name }}, <small>created on: {{ testimonial.date_created }}</small> </strong> 
     </button>
   </h2>
   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
