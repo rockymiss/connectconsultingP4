@@ -12,7 +12,7 @@
     <div class="spacer py-5"></div>
     {% if messages %}
 
-<div class="messages index-content grey-bg">
+<div class="messages index-content">
     {% for message in messages %}
     <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
     {% endfor %}

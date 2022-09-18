@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import TemplateView, ListView
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.views import generic, View
@@ -158,13 +159,11 @@ class CreateTestimonView(UserPassesTestMixin, CreateView):
         index.html page
         """
         form = form.save(commit=False)
-        messages.success(self.request,
-                         'Thank you, your Testimonial has\
-                         been sent for approval')
+        messages.success(
+            self.request,
+            'You have added a new Testimonial and\
+             it has been sent to admin for approval!')
         return super().form_valid(form)
-
-
-        
 
 
 # Favourites Post
