@@ -6,15 +6,25 @@
     --white: #FCFCFC;
     --crayolaYellow: #FFFFAB;
     --greyfive: #e2dbdb;
+    --greytrans: #00e2dbdb;
   }
 
 .grey-bg {
     background-color: var(--greyfive);
   }
 
+.grey-bg-t {
+  background-color: var(--greytrans);
+}
+
 .yellow-bg {
   background-color: var(--crayolaYellow);
 }
+
+.background-grad {
+  background: linear-gradient(90deg, hsla(60, 100%, 84%, 1) 5%, hsla(0, 0%, 95%, 1) 41%, hsla(0, 0%, 0%, 1) 100%, hsla(0, 0%, 99%, 1) 100%, hsla(0, 0%, 5%, 1) 100%);
+}
+
 
 /* Main */
 
@@ -126,9 +136,10 @@ footer {
 
 }
 }
- 
-.card-header {
-  background-color: var(--greyfive) !important;
+
+/*buttons*/
+
+input[type="submit"] {
 
 }
 
