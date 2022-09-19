@@ -20,7 +20,7 @@ class ContactForm(ModelForm):
         widgets = {
             'message': Textarea(
                 attrs={
-                    "placeholder": "Would love to hear from you"
+                    "placeholder": "We would love to hear from you"
                 }
             )
         }
