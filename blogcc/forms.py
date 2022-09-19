@@ -1,5 +1,6 @@
 from django import forms
 from .models import BlogPost, Testimonial, BlogComment
+from django_summernote.widgets import SummernoteWidget
 
 
 class CreateBlog(forms.ModelForm):
@@ -9,6 +10,10 @@ class CreateBlog(forms.ModelForm):
     """
     class Meta:
         model = BlogPost
+        widgets = {
+            'blog_content': SummernoteWidget(),
+        }
+
         fields = ('author',
                   'blog_title',
                   'blog_subtitle',

@@ -102,6 +102,7 @@
                     
                     <!-- The body of the comment goes before the | -->
                     {{ comment.comment_body | linebreaks }}
+                    <hr>
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
@@ -120,10 +121,13 @@
                 <h3>Leave a Comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="POST" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
+                    {{ comment_form | safe }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg page-link grey-bg rounded p-1 fw-bold border-1 text-reset">Submit</button>
                 </form>
+                {% else %}
+                    <p>You must be logged in to leave comments </p>
+                    <a href="{% url 'account_login' %}"><button class="p-1 rounded border border-2 border-dark" type="submit">Login</button></a>
                 {% endif %}
                 {% endif %}
             </div>
