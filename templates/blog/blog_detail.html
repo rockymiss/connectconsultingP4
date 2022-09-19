@@ -18,7 +18,7 @@
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.blog_created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.blog_image_1.url %}
         <img class="card-img-top img-fluid hide" alt="Blog Image !">
@@ -89,14 +89,11 @@
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ comment.comment_user_name }}
-                        <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
-                            {{ comment.comment_created }}
-                        </span> wrote:
-                    </p>
+                    
+                    <p class=" text-muted font-weight-normal mb-0 fw-bold">
+                    <small>{{ comment.comment_created }}</small>
+                    <p class="fw-bold">{{ comment.name }}  wrote:</p>
+                    
                     <!-- The body of the comment goes before the | -->
                     {{ comment.comment_body | linebreaks }}
                 </div>
@@ -119,7 +116,7 @@
                 <form method="POST" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-signup btn-lg page-link grey-bg rounded p-1 fw-bold border-1 text-reset">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}
