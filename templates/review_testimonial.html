@@ -18,7 +18,11 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingOne">
     <button class="accordion-button background-grad" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      Message from:- <strong> {{ testimonial.name }}, {{ testimonial.company_name }}, <small>created on: {{ testimonial.date_created }}</small> </strong> 
+      <div>
+      <p class="m-0">Message from:- </p>
+      <p class="m-0"><strong> {{ testimonial.name }}, {{ testimonial.company_name }}</strong></p>
+      <p class="m-0"><small><small><small></small>{{ testimonial.date_created }}</small></small></small></p>
+    </div>
     </button>
   </h2>
   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
