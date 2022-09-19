@@ -11,10 +11,10 @@
 <form method="post" class="text-center">
     {% csrf_token %}
     <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this Blog?</p>
-    <input class="btn btn-danger btn-lg" type="submit" value="Yes">
+    <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
     <div><br>
-        <a href="#">
-            <button type="button" class="btn-success btn-sm">Go Back</button></a>
+        <a href="{% url 'blog' %}">
+            <button type="button" class="grey-bg rounded p-1 fw-bold border-1">Go Back</button></a>
         </div>
     </div>
 </div>
