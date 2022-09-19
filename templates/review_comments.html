@@ -4,22 +4,41 @@
 
 
 {% block content %}
-<!-- Reviews for Approval -->
-<div>
-    <!--spacer to push page below navbar-->
-    <div class="spacer py-5"></div>
-      {% for comment in comments %}
-      <h2>{{ comment.name }}</h2>
-      <h2>{{ comment.comment_created }}</h2>
-      <h2>{{ comment.comment_body | linebreaks }}</h2>
-      <h2>{{ comment.approve}}</h2>
-      <hr>
-      <a href="{% url 'approve_comment' comment.pk %}" class="btn btn-primary">Approve Comment</a>
-      <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-primary">Delete Comment</a>
-            </div>
-           
-      {% endfor %}
+
+<div class="accordion index-content" id="accordionExample">
+  <!--spacer to push page below navbar-->
+<div class="spacer py-5"></div>
+{% for comment in comments %}
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button background-grad text-reset text-wrap" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <div class="p-0">
+        <p class="m-0">
+           Message from: 
+        </p>
+        <p class="m-0"> <strong>{{ comment.name }}</strong> ,&nbsp  
+        </p>
+        <p>
+          <small><small>{{ comment.comment_created }}</small></small>
+        </p>
     </div>
-  </section>
+      
+    </button>
+  </h2>
+  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      {{ comment.comment_body | linebreaks }}</code>
+      <p>
+        <a href="{% url 'approve_comment' comment.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve Comment</a>
+      <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete Comment</a>
+        
+       
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+
     
 {% endblock %}
