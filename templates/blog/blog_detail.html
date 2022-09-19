@@ -39,6 +39,12 @@
                 <p class="card-text ">
                     {{ post.blog_content | safe }}
                 </p>
+                <!-- The featured image URL goes in the src attribute -->
+                {% if "placeholder" in post.blog_image_2.url %}
+        <img class="card-img-top img-fluid hide" alt="Blog Image !">
+          {% else %}
+          <img class="card-img-top img-fluid" src=" {{ post.blog_image_2.url }} " alt="{{ post.blog_title}}" width="100%"> 
+          {% endif %}
                 <div class="row">
 
                     <div class="col-1">
