@@ -7,6 +7,14 @@
 <div class="container-fluid background index-content">
     <!--spacer to push page below navbar-->
     <div class="spacer py-5"></div>
+    {% if messages %}
+
+<div class="messages index-content">
+    {% for message in messages %}
+    <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
+    {% endfor %}
+</div>
+{% endif %}
     <div class="row">
         
         <div class="col-xl-12 col-l-6 mt-3 justify-content-center">

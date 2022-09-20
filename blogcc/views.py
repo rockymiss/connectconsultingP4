@@ -221,6 +221,9 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
 
         form = form.save(commit=False)
         form.slug = slugify(form.blog_title)
+        messages.success(
+            self.request,
+            'You have added a new Blog and can view it below')
         return super().form_valid(form)
 
 
