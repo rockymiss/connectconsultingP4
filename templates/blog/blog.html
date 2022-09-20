@@ -9,18 +9,18 @@
     <div class="spacer py-5"></div>
     {% if messages %}
 
-<div class="messages index-content">
+<div class="messages index-content align-self-center>
     {% for message in messages %}
     <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
     {% if user.is_superuser %}
-<div>
-                      <a href="{% url 'blogdraft' %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Draft Blogs</a>
+
+                      <a href="{% url 'blogdraft' %}" class="btn btn-primary grey-bg border border-dark rounded text-dark m-auto" width: 20px;>Draft Blogs</a>
                       
                     {% endif %}
                     </div>
     {% endfor %}
     
-</div>
+
 {% endif %}
 
 
@@ -63,7 +63,7 @@
                 {% endif %}
                 {% endfor %}
             </div>
-
+          </div>
         </div>
     </div>
 </div>
@@ -80,6 +80,7 @@
     </ul>
   </nav>
 </div>
+
 
 
   {% endif %}
