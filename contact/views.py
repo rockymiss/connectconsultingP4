@@ -11,8 +11,8 @@ from .forms import ContactForm
 
 class ContactCreate(CreateView):
     """
-    Creates a view so that users 
-    can fill out a contact form to 
+    Creates a view so that users
+    can fill out a contact form to
     contact the owners
     """
     model = ContactUs
@@ -31,7 +31,7 @@ class ThankYouView(TemplateView):
 class MessageView(UserPassesTestMixin, ListView):
     """
     Checks to see if user is superuser, gets a list of
-    Messages made by user 
+    Messages made by user
     """
 
     def test_func(self):
@@ -49,7 +49,7 @@ class MessageView(UserPassesTestMixin, ListView):
 class DeleteMessage(UserPassesTestMixin, DeleteView):
     """
     Checks to see if user is admin and allows admin
-    to delete a message sent by the user 
+    to delete a message sent by the user
     """
     def test_func(self):
         """
@@ -82,4 +82,3 @@ class DeleteMessage(UserPassesTestMixin, DeleteView):
         getmessage.delete()
 
         return redirect('getmessage')
-
