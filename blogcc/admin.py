@@ -13,7 +13,7 @@ class PostAdmin(SummernoteModelAdmin):
     on the admin panel
 
     """
-    
+
     search_fields = ['blog_title', 'blog_content']
     list_display = ('blog_title',
                     'slug',
@@ -39,7 +39,7 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ('name', 'comment_body')
     actions = ['comment_approve']
 
-    def comment_approve(self, request, queryset):
+    def comment_approve(self, queryset):
         """
         Creates an action which allows admin to approve a comment
         """
@@ -53,7 +53,7 @@ class PostTestimonal(SummernoteModelAdmin):
     to the BlogPost Model on the admin panel
     """
 
-    search_fields = ['company_name', 'name',]
+    search_fields = ['company_name', 'name', ]
     list_display = (
                     'name',
                     'company_name',
@@ -64,7 +64,7 @@ class PostTestimonal(SummernoteModelAdmin):
     summernote_fields = ('content')
     actions = ['approve']
 
-    def testimonial_approve(self, request, queryset):
+    def testimonial_approve(self, queryset):
         """
         Creates an action which allows admin to approve a comment
         """

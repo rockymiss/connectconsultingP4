@@ -1,10 +1,10 @@
+# pylint: disable=locally-disabled, no-member
 """Views"""
 
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import TemplateView, ListView
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
-from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.views import generic, View
@@ -12,10 +12,9 @@ from django.urls import reverse_lazy
 from django.utils.text import slugify
 from .models import BlogPost, BlogComment, Testimonial
 from .forms import CreateBlog, CreateTestimonial, CreateComment
-from django.contrib import messages
-
 
 # Template Views
+
 
 class HomePageView(TemplateView):
     """
@@ -65,7 +64,6 @@ class BlogDetail(View):
         if post.blog_favourite.filter(id=self.request.user.id).exists():
             blog_favourite = True
 
-
         return render(
             request,
             "blog/blog_detail.html",
@@ -103,7 +101,7 @@ class BlogDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            
+ 
         else:
             comment_form = CreateComment()
 
@@ -127,10 +125,12 @@ class TestimonList(generic.ListView):
     Creates a list of testimonials using the Testimonial Model
     """
     model = Testimonial
-    queryset = Testimonial.objects.filter(approve=True).order_by('-date_created')
+    queryset = Testimonial.objects.filter(
+        approve=True).order_by('-date_created')
     template_name = 'testimonial.html'
     paginate_by = 3
     context_object_name = "testlist"
+
 
 class CreateTestimonView(UserPassesTestMixin, CreateView):
     """
@@ -250,13 +250,6 @@ class BlogUpdate(UserPassesTestMixin, UpdateView):
         Checks if superuser
         """
         return self.request.user.is_superuser
-
-    def form_valid(self, form):
-        """
-        Validates the form
-        """
-
-        return super().form_valid(form)
 
 
 class BlogDelete(UserPassesTestMixin, DeleteView):

@@ -5,7 +5,7 @@ from django_summernote.widgets import SummernoteWidget
 
 class CreateBlog(forms.ModelForm):
     """
-    A Form to allow admin to create a blog 
+    A Form to allow admin to create a blog
     on their admin page
     """
     class Meta:
@@ -42,5 +42,3 @@ class CreateComment(forms.ModelForm):
     class Meta:
         model = BlogComment
         fields = ('comment_body',)
-
-
