@@ -5,33 +5,35 @@
 
 {% block content %}
 <!-- Testimonials -->
+<!--Main div to center and add background consistently throughout website -->
 <div class="container-fluid index-content background">
     <!--spacer to push page below navbar-->
     <div class="spacer py-5"></div>
-    {% for test in testlist %}
-    <div class="card mt-3" style="width: 100%;">
-      <div class="card-header background-grad">
+      {% for test in testlist %}
+        <div class="card mt-3" style="width: 100%;">
+        <div class="card-header background-grad">
         {{ test.company_name }}
-      </div>
-      <div class="card-body">
-        <blockquote class="blockquote mb-0">
-          <p>"{{ test.content }}"</p>
-          <footer class="blockquote-footer"> <cite title="Source Title">Created on: {{ test.date_created }}</cite></footer>
-        </blockquote>
-      </div>
-    </div>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>"{{ test.content }}"</p>
+              <footer class="blockquote-footer"> <cite title="Source Title">Created on: {{ test.date_created }}</cite></footer>
+          </blockquote>
+        </div>
+        </div>
 
- <!--Pagination for testimonial list -->
- {% if forloop.counter|divisibleby:3 %}
+        <!--Pagination for testimonial list -->
+        {% if forloop.counter|divisibleby:3 %}
             
- <div class="row">
-     {% endif %}
-     {% endfor %}
-  </div>
-  </div>
+          <div class="row">
+        {% endif %}
+      {% endfor %}
+          </div>
+  
 
  
  {% if is_paginated %}
+ <!--Paginate the testimonials 3 to a page -->
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center mt-3">
       {% if page_obj.has_previous %} 
@@ -42,15 +44,7 @@
         {% endif %}
 
     </ul>
-  </nav>
-
-</div>
-
-
-
-
-
+</nav>
   {% endif %}
-
-
+</div>
 {% endblock %}

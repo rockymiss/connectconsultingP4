@@ -4,27 +4,29 @@
 
 
 {% block content %}
+<!--Main div to center and add background consistently throughout website -->
 <div class="container-fluid background index-content">
     <!--spacer to push page below navbar-->
     <div class="spacer py-5"></div>
     {% if messages %}
 
-<div class="messages index-content align-self-center>
-    {% for message in messages %}
-    <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
-    {% if user.is_superuser %}
+      <div class="messages index-content align-self-center">
+        <!--Displays a message if  -->
+        {% for message in messages %}
+          <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
+            <!--Checks if user is superuser as only superusers should see this button-->  
+            {% if user.is_superuser %}
 
                       <a href="{% url 'blogdraft' %}" class="btn btn-primary grey-bg border border-dark rounded text-dark m-auto" width: 20px;>Draft Blogs</a>
                       
-                    {% endif %}
+            {% endif %}
                     </div>
-    {% endfor %}
+        {% endfor %}
     
-
-{% endif %}
-
+    {% endif %}
 
 
+  <!--Main display for list of blogs -->
     <div class="row">
         
         <div class="col-xl-12 col-l-6 mt-3 justify-content-center">
@@ -60,19 +62,20 @@
               {% if forloop.counter|divisibleby:3 %}
             
             <div class="row">
-                {% endif %}
-                {% endfor %}
+              {% endif %}
+              {% endfor %}
             </div>
           </div>
         </div>
     </div>
 </div>
+
 {% if is_paginated %}
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
       {% if page_obj.has_previous %} 
       <li class="p-3"><a href="?page={{ page_obj.previous_page_number }}" class="page-link grey-bg border border-dark rounded text-dark p-1">&laquo; PREV</a></li>
-        {% endif %}
+{% endif %}
         {% if page_obj.has_next %}
         <li class="p-3"><a href="?page={{ page_obj.next_page_number }}" class="page-link grey-bg border border-dark rounded text-dark p-1">NEXT &raquo;</a></li>
         {% endif %}
@@ -81,9 +84,6 @@
   </nav>
 </div>
 
-
-
-  {% endif %}
-
+{% endif %}
 
 {% endblock %}

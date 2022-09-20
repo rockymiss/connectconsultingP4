@@ -4,19 +4,19 @@
 
 
 {% block content %}
-<div>
+<!--Main div to center and add background consistently throughout website -->
+<div class="index-content background">
       <!--spacer to push page below navbar-->
       <div class="spacer py-5"></div>
-<h1>Delete Blog</h1>
-<form method="post" class="text-center">
-    {% csrf_token %}
-    <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this Blog?</p>
-    <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
-    <div><br>
-        <a href="{% url 'blog' %}">
-            <button type="button" class="grey-bg rounded p-1 fw-bold border-1">Go Back</button></a>
-        </div>
-    </div>
-</div>
-    
+        <h1 class="display-6 align-self-center">Delete Blog</h1>
+        <!--Form to delete blog-->
+            <form method="post" class="text-center">
+                {% csrf_token %}
+                <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this Blog?:</p>
+                <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
+                    <div><br>
+                    <a href="{% url 'blog' %}">
+                        <button type="button" class="grey-bg rounded p-1 fw-bold border-1">Go Back</button></a>
+                    </div>
+</div>             
 {% endblock %}

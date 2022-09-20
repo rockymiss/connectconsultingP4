@@ -5,18 +5,20 @@
 
 
 {% block content %}
+<!--Main div to center and add background consistently throughout website -->
 <div class="index-content background">
       <!--spacer to push page below navbar-->
-      <div class="spacer py-5"></div>
-<h1>Create your blog here</h1>
-<p><small><small>*Blogs should be created on devices higher than 760px wide as smaller screens are not suitable</small></p>
-<div class="text-center">    
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input type="submit" value="Submit">
-</form>
-</div>
+    <div class="spacer py-5"></div>
+    <h1>Create your blog here</h1>
+    <p><small><small>*Blogs should be created on devices higher than 760px wide as smaller screens are not suitable</small></p>
+        <div class="text-center">  
+            <!--Form to create blog -->  
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
 </div>
     
 {% endblock %}

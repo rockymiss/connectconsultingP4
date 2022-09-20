@@ -4,15 +4,17 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<!--Main div to center and add background consistently throughout website -->
 <div class="index-content background">
       <!--spacer to push page below navbar-->
       <div class="spacer py-5"></div>
-<h1>Send us a message!</h1>
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input type="submit" value="Send" class="grey-bg rounded p-1 fw-bold border-1">
-</form>
+      <!--Form to send a message -->
+        <h1>Send us a message!</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Send" class="grey-bg rounded p-1 fw-bold border-1">
+        </form>
 </div>
     
 {% endblock %}

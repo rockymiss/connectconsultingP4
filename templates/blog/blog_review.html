@@ -8,6 +8,7 @@
       <!--spacer to push page below navbar-->
       <div class="spacer py-5"></div>
 <h1>Update Blog</h1>
+<!--Displays Form to view a blog-->
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{form.as_p}}

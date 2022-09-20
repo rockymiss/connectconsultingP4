@@ -5,35 +5,35 @@
 
 {% block content %}
 
-    
-
-
 <!-- Testimonials for Approval -->
 
-    
-<div class="accordion index-content" id="accordionExample">
+ <!--Main div and accordion to center and add background consistently throughout website -->   
+<div class="accordion index-content background" id="accordionExample">
   <!--spacer to push page below navbar-->
-<div class="spacer py-5"></div>
-<h1 class="fs-5 fw-bold"> Review Testimonials</h1>
-{% for testimonial in testimonials %}
-<div class="accordion-item">
-  <h2 class="accordion-header" id="headingOne">
-    <button class="accordion-button background-grad" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      <div>
-      <p class="m-0">Message from:- </p>
-      <p class="m-0"><strong> {{ testimonial.name }}, {{ testimonial.company_name }}</strong></p>
-      <p class="m-0"><small><small><small></small>{{ testimonial.date_created }}</small></small></small></p>
+  <div class="spacer py-5"></div>
+  <h1 class="fs-5 fw-bold"> Review Testimonials</h1>
+  <!--Displays all messages in an accordion style -->
+  {% for testimonial in testimonials %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button background-grad" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <div>
+          <p class="m-0">Message from:- </p>
+          <p class="m-0"><strong> {{ testimonial.name }}, {{ testimonial.company_name }}</strong></p>
+          <p class="m-0"><small><small><small></small>{{ testimonial.date_created }}</small></small></small></p>
+        </div>
+        </button>
+      </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">{{ testimonial.content | linebreaks }}</code>
+              <p>
+                <a href="{% url 'approve_testimonial' testimonial.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve</a>
+                <a href="{% url 'delete_testimonial' testimonial.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a></p>
+              </p>
+              </div>
+          </div>
     </div>
-    </button>
-  </h2>
-  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-    <div class="accordion-body">{{ testimonial.content | linebreaks }}</code>
-      <p><a href="{% url 'approve_testimonial' testimonial.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Approve</a>
-        <a href="{% url 'delete_testimonial' testimonial.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a></p>
-    </div>
-  </div>
-</div>
-{% endfor %}
+  {% endfor %}
 </div>
 
 {% endblock %}

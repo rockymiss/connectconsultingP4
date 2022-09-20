@@ -4,11 +4,12 @@
 
 
 {% block content %}
-<div index-content>
+<!--Main div to center and add background consistently throughout website -->
+<div class="index-content background">
     <!--spacer to push page below navbar-->
     <div class="spacer py-5"></div>
 
-
+<!--Form to delete comment -->
 <form method="post" class="text-center">
     {% csrf_token %}
     <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this comment? {{ comment.comment_body }}</p>
@@ -17,7 +18,7 @@
         <a href="{% url 'review_comments' %}">
             <button type="button" class="grey-bg rounded p-1 fw-bold border-1">Go Back</button></a>
         </div>
-    </div>
 </div>
+
     
 {% endblock %}

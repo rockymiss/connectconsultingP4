@@ -7,23 +7,24 @@
 
 {% block content %}
 
-
+<!--Main div to center and add background consistently throughout website -->
 <div class="index-content background">
     <div class="spacer py-5"></div>
     {% if messages %}
+    <!--Success messages -->
+        <div class="messages index-content">
+            {% for message in messages %}
+            <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <!--Form to create testimonial -->
+        <h1>Create your Testimonial</h1>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy}}
+                <input class="grey-bg rounded p-1 fw-bold border-1"type="submit" value="Submit">
+            </form>
+</div>
 
-<div class="messages index-content">
-    {% for message in messages %}
-    <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
-    {% endfor %}
-</div>
-{% endif %}
-<h1>Create your Testimonial</h1>
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form|crispy}}
-    <input class="grey-bg rounded p-1 fw-bold border-1"type="submit" value="Submit">
-</form>
-</div>
-    
 {% endblock %}
