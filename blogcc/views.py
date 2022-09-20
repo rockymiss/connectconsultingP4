@@ -34,13 +34,26 @@ class About(TemplateView):
 
 class BlogPostList(generic.ListView):
     """
-    Creates a list of blogs using the BlogPost Model
+    Creates a list of blogs with status of posted
+    using the BlogPost Model
     """
     model = BlogPost
     queryset = BlogPost.objects.filter(status=1).order_by('-blog_created_on')
     template_name = 'blog/blog.html'
     paginate_by = 3
     context_object_name = "bloglist"
+
+
+class BlogPostDraft(generic.ListView):
+    """
+    Creates a list of blogs with status of draft
+    using the BlogPost Model
+    """
+    model = BlogPost
+    queryset = BlogPost.objects.filter(status=0).order_by('-blog_created_on')
+    template_name = 'blog/blog_draft.html'
+    paginate_by = 3
+    context_object_name = "blogdraft"
 
 
 class BlogDetail(View):
@@ -223,7 +236,9 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
         form.slug = slugify(form.blog_title)
         messages.success(
             self.request,
-            'You have added a new Blog and can view it below')
+            'You have created a new Blog.  If set to posted\
+                you can view the blog below, otherwise click\
+                    draft blogs.')
         return super().form_valid(form)
 
 

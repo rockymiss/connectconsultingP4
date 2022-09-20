@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block title %}
-<title>Blog Post</title>
+<title>Draft Blogs</title>
 {% endblock %}
 
 
@@ -12,24 +12,14 @@
 <div class="messages index-content">
     {% for message in messages %}
     <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
-    {% if user.is_superuser %}
-<div>
-                      <a href="{% url 'blogdraft' %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Draft Blogs</a>
-                      
-                    {% endif %}
-                    </div>
     {% endfor %}
-    
 </div>
 {% endif %}
-
-
-
     <div class="row">
         
         <div class="col-xl-12 col-l-6 mt-3 justify-content-center">
             <div class="row justify-content-around">
-                {% for blog in bloglist %}
+                {% for blog in blogdraft %}
 
             <div class="card m-3" style="width: 18rem;">
                 {% if "placeholder" in blog.blog_image_1.url %}
@@ -42,7 +32,7 @@
                   <p class="card-text">{{ blog.blog_subtitle }}</p>
                   <p class="card-text">Author: {{ blog.author }}</p>
                   <p class="card-text">Created on: {{ blog.blog_created_on }} 
-                    {{ post.number_of_favourites }}</p></p>
+                  </p></p>
                     
                 </div>
                 <div class="row align-self-center pb-1">
