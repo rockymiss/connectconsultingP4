@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% load static %} {% block title %}
 <title>{{ post.blog_title }}</title>
 {% endblock %}
+{% load crispy_forms_tags %}
 
 
 {% block content %}
@@ -121,7 +122,7 @@
                 <h3>Leave a Comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="POST" style="margin-top: 1.3em;">
-                    {{ comment_form | safe }}
+                    {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg page-link grey-bg rounded p-1 fw-bold border-1 text-reset">Submit</button>
                 </form>
