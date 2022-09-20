@@ -5,10 +5,10 @@
 
 For my **Portfolio 4 Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created a Blog Website for a consulting Company called Connect Consulting.  
 
-Link to the deployed app is [here](https://connectconsulting.herokuapp.com/).
+Link to the deployed app is [here](https://connect-consultingp4.herokuapp.com/).
 
 
-![alt text](https://mockup)
+![alt text](https://res.cloudinary.com/rockymiss/image/upload/v1663683841/connectconsulting/mockup_wyhzpp.png)
 
 -----
 
