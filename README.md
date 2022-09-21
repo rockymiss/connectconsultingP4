@@ -5,6 +5,10 @@
 
 For my **Portfolio 4 Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created a Blog Website for a consulting Company called Connect Consulting.  
 
+Connecting Consulting is a Consulting Company that can help clients identify their business issues, develop solutions and take remedial action.  It’s main objective is to create a meaningful impact in the lives of their clients.  What sets Connect Consulting apart is their genuine passion for helping others.  Connect Consulting connect the dots of business through people.
+
+The website is created almost like a Wordpress Blog website where the user can create, view, edit and delete blogs on the frontend making it easier on the client and it saves on yearly subscription fees.
+
 Link to the deployed app is [here](https://connect-consultingp4.herokuapp.com/).
 
 
@@ -16,11 +20,24 @@ Link to the deployed app is [here](https://connect-consultingp4.herokuapp.com/).
 
 -----
 
+The main objective is to create an interactive website that the owner as a user can engage with via an admin login system to access a database.   The website is created like a Wordpress Blog website where the user can create, view, edit and delete blogs on the frontend making it easier on the client and it saves on yearly subscription fees.   Users other than admin can login, leave comments and testimonials and read information for the blog that the owner has created, thus helping them which is the object of Connect Consulting.
+
+
 ## User Experience
+
+Site Aims
+1. To create a website to allow the owner to create, update and delete blogs.
+1. To allow the owner/user to create, view and approve testimonials.
+1. To allow the owner/user to view or delete messages from other users.
+1. To allow the owner to view, approve or delete message from other users.
+1. To allow users to view information about the company and the service they provide.
+1. To allow users view blogs.
+1. To allow users to leave comments on blogs.
+1. To allow users to like a blog.
 
 
 ### From a User's Perspective
-As a user it is important: 
+As a user it is important:
 
 
 
