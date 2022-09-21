@@ -35,6 +35,35 @@ Site Aims
 1. To allow users to leave comments on blogs.
 1. To allow users to like a blog.
 
+### Agile Methodology
+
+To plan this project I used agile methodology.  This was done using Github and the Project Board.
+
+By using the Kanban board and in particular Milestones I was able to divide the project into difference epics such as:
+
+1. Development
+1. Design
+1. Content
+1. Authoristation
+1. Comments
+
+For better organisation I used both the Table View and Kanban view. The Kanban view meant I could put each issue into a different section, Backlog, In progress, Completed and Wishlist.
+
+<details open>
+<summary>Kanban View</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1663778544/connectconsulting/readme/kanban-view_zon2gk.png"></p>
+
+</details>
+
+The table view allowed me to view all of the issues in each section clearly.  
+
+<details open>
+<summary>Table View</summary> 
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1663778544/connectconsulting/readme/table-view_udld80.png"></p>
+
+</details>
+
+Issues were created by way of User Stories or Admin User Stories and any other elements required to complete the database.  While working on a particular user story they were moved into ‘In progress’.  Once completed they were moved to ‘completed’.  This gave a better view of what was to be completed and what had already been completed.  As work was committed to the github repository each issue was marked completed which automatically moved to the ‘completed’ section on the Kanban Board.
 
 ### From a User's Perspective
 As a user it is important:
