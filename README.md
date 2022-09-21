@@ -92,26 +92,31 @@ Issues were created by way of User Stories or Admin User Stories and any other e
 1. As a user I can fill out a form so that I can contact the owner.
 1. As a user I can logout of the website so that I can logout of the website.
 
+## Wireframes
+
+While the site has changed somewhat since the beginning of the project, wireframes were a useful too to visualize the website.  Wireframes below.
+
+<details open>
+<summary>Wireframes</summary> 
+<p align="center"><img src="docs/wireframes/homepage.png"></p>
+
+<p align="center"><img src="docs/wireframes/about.png"></p>
+
+<p align="center"><img src="docs/wireframes/blog.png"></p>
+
+<p align="center"><img src="docs/wireframes/contact.png"></p>
+
+<p align="center"><img src="docs/wireframes/login.png"></p>
+
+<p align="center"><img src="docs/wireframes/register.png"></p>
+
+<p align="center"><img src="docs/wireframes/userpage.png"></p>
+
+<p align="center"><img src="docs/wireframes/admin.png"></p>
+
+</details>
+
 ## Features
-
-
-![Home Page](docs/wireframes/homepage.png)
-
-![About Page](docs/wireframes/about.png)
-
-![Blog Page](docs/wireframes/blog.png)
-
-![Contact Page](docs/wireframes/contact.png)
-
-![Log-In Page](docs/wireframes/login.png)
-
-![Register Page](docs/wireframes/register.png)
-
-![User Page](docs/wireframes/userpage.png)
-
-![Admin Page](docs/wireframes/admin.png)
-
-
 ### Existing Features
 
 Home
