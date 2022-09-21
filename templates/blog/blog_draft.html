@@ -18,7 +18,7 @@
             <div class="card m-3" style="width: 18rem;">
               <!--hides if no image selected and displays if there is-->
                 {% if "placeholder" in blog.blog_image_1.url %}
-                <img src="https://res.cloudinary.com/rockymiss/image/upload/v1662238528/connectconsulting/0r9A5j3o_zu7yvb.png" class="card-img-top" alt="Image of connect consulting logo">
+                <img src="https://res.cloudinary.com/rockymiss/image/upload/v1662238528/connectconsulting/0r9A5j3o_zu7yvb.png" class="card-img-top" alt="Image of connect consulting logo" width="100">
                 {% else %}
                 <img src="{{ blog.blog_image_1.url }}" class="card-img-top" alt="{{ post.blog_title }}">
                 {% endif %}
