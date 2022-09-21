@@ -1,5 +1,5 @@
 """
-urls for blog app
+urls for contact app
 """
 from django.urls import path
 from .views import ContactCreate, ThankYouView, MessageView, DeleteMessage
