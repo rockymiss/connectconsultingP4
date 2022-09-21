@@ -35,7 +35,7 @@ Site Aims
 1. To allow users to leave comments on blogs.
 1. To allow users to like a blog.
 
-### Agile Methodology
+### Agile Methodology - UX
 
 To plan this project I used agile methodology.  This was done using Github and the Project Board.
 
@@ -66,16 +66,33 @@ The table view allowed me to view all of the issues in each section clearly.
 Issues were created by way of User Stories or Admin User Stories and any other elements required to complete the database.  While working on a particular user story they were moved into ‘In progress’.  Once completed they were moved to ‘completed’.  This gave a better view of what was to be completed and what had already been completed.  As work was committed to the github repository each issue was marked completed which automatically moved to the ‘completed’ section on the Kanban Board.
 
 ### From a User's Perspective
-As a user it is important:
 
+#### Admin User's Perspective
 
+1. As an Admin User I can login to have access to the admin panel.
+1. As an Admin User I can create blogs so that users can read them.
+1. As an Admin User I can delete blogs so as to control content on the website.
+1. As an Admin User I can amend blogs so as to control content on the website.
+1. As an Admin User I can create testimonials so that they can be view by other users.
+1. As an Admin User I can view messages left by other users so that I can read them and contact them if needed.
+1. As an Admin User I can approve testimonials left by the user so as to control content on the website.
+1. As an Admin User I can approve or delete comments left by the user so as to control content on the website.
 
-### Users Fulfilment
+#### User's Perspective
 
+1. As a user I can register or login to the website so that I can leave comments and testimonials. 
+1. As a user I can enter the website and clearly see the purpose of the website and easily navigate the website.
+1. As a user I can click ‘About’ and clearly see what the website is about, who owns the company and what the company offers.
+1. As a user I can read Testimonials from other users that admin has approved.
+1. As a user I can create Testimonials for the company which are then sent for approval.
+1. As a user I can view a list of blogs created by the company so that I can choose which blog to read.  
+1. As a user I can select the blog I want to view so that I can read information about that blog.
+1. As a user I can leave comments on a blog so that I can provide feedback to the owner.
+1. As a user I can mark a blog as favourite so that I can provide feedback to the owner.
+1. As a user I can fill out a form so that I can contact the owner.
+1. As a user I can logout of the website so that I can logout of the website.
 
-
------
-## UX 
+## Features
 
 
 ![Home Page](docs/wireframes/homepage.png)
