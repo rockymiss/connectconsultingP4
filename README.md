@@ -116,6 +116,11 @@ While the site has changed somewhat since the beginning of the project, wirefram
 
 </details>
 
+## Database Schema
+
+<p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1663781299/connectconsulting/readme/database-schema_lyvxji.png"></p>
+
+
 ## Features
 ### Existing Features
 
