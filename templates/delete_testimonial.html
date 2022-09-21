@@ -8,15 +8,20 @@
 <div class="index-content background">
      <!--spacer to push page below navbar-->
      <div class="spacer py-5"></div>
+     <h1 class="display-6 align-self-center">Delete Testimonial</h1>
 <!--Form to delete testimonial -->
-<form method="post" class="text-center">
-    {% csrf_token %}
-    <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this testimonial? </p>
-    <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
-    <div><br>
-        <a href="{% url 'review_testimonial' %}">
-            <button type="button" class="grey-bg rounded p-1 fw-bold border-1">Go Back</button></a>
-        </div>
+
+        <form method="post" class="text-center mb-2">
+            {% csrf_token %}
+            <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this testimonial? </p>
+            <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
+        </form>    
+
+        <form class="text-center" method="GET" action="{% url 'review_testimonial' %}">
+            <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Go Back">
+          </form>
+
+
 </div>
 
     

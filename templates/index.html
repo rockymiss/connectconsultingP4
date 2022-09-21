@@ -7,7 +7,14 @@
 <!--Main div to center and add background consistently throughout website -->
 <div class="main-content background">
       <div class="spacer py-3"></div>
-     
+      {% if messages %}
+    <!--Success messages -->
+        <div class="messages index-content">
+            {% for message in messages %}
+            <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
+            {% endfor %}
+        </div>
+    {% endif %}
       <div class="index-content">
             <div class="row text-center">
                   <div class="col"><img src="http://res.cloudinary.com/rockymiss/image/upload/v1663501631/connectconsulting/hosp-special-logo_vgqnax.png" alt="Logo image with CC logo in the background with words hospitality experts"></div>

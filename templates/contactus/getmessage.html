@@ -4,9 +4,8 @@
 
 
 {% block content %}
-
+<!--Messages-->
 <!--Accordion to display messages for approval -->
-<!--Main div to center and add background consistently throughout website -->
 <div class="accordion index-content background" id="accordionExample">
         <!--spacer to push page below navbar-->
     <div class="spacer py-5"></div>
@@ -14,25 +13,19 @@
         {% for mess in getmessage %}
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button background-grad" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <div class="p-0">
-                <p class="m-0">
-                  Message from: 
-                </p>
-                <p class="m-0"> <strong>{{ mess.first_name }} &nbsp {{ mess.last_name }} </strong> ,&nbsp  
-                </p>
-                <p>
-                  <small><small>{{ mess.date_created }}</small></small>
-                </p>
-            </div>
-
+            
+            <button class="accordion-button background-grad text-reset text-wrap" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Message from: 
+                <strong>{{ mess.first_name }} {{ mess.last_name }} </strong>  
             </button>
           </h2>
           <!--Allow admin to delete a message directly -->
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <strong>{{ mess.email }}</strong> {{ mess.message | linebreaks }}</code>
-              <p><a href="{% url 'message_confirm_delete' mess.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a></p>
+              <p>
+                <a href="{% url 'message_confirm_delete' mess.pk %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Delete</a>
+              </p>
             </div>
           </div>
         </div>

@@ -9,6 +9,15 @@
 <div class="container-fluid index-content background">
     <!--spacer to push page below navbar-->
     <div class="spacer py-5"></div>
+
+    {% if messages %}
+    <!--Success messages -->
+        <div class="messages index-content">
+            {% for message in messages %}
+            <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
+            {% endfor %}
+        </div>
+    {% endif %}
       {% for test in testlist %}
         <div class="card mt-3" style="width: 100%;">
         <div class="card-header background-grad">

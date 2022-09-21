@@ -10,14 +10,17 @@
     <div class="spacer py-5"></div>
 
 <!--Form to delete comment -->
-<form method="post" class="text-center">
-    {% csrf_token %}
-    <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this comment? {{ comment.comment_body }}</p>
-    <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
-    <div><br>
-        <a href="{% url 'review_comments' %}">
-            <button type="button" class="grey-bg rounded p-1 fw-bold border-1">Go Back</button></a>
-        </div>
+        <form method="post" class="text-center mb-2">
+            {% csrf_token %}
+            <p> Are you sure {{ user.username }}, that you would like to <strong>delete</strong> this comment? </p>
+            <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Yes">
+        </form>    
+
+        <form class="text-center" method="GET" action="{% url 'review_comments' %}">
+            <input class="grey-bg rounded p-1 fw-bold border-1" type="submit" value="Go Back">
+        </form>
+
+        
 </div>
 
     

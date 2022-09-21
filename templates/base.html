@@ -34,62 +34,69 @@
           src="https://res.cloudinary.com/rockymiss/image/upload/v1662241901/connectconsulting/Logo_nqqshq.png"
           height="60"
                   width="180"
-                  alt="Image of connect consulting logo"
-         
-          alt="Clean logo with the words connect consulting"/></a>
+                  alt="Clean logo with the words connect consulting"/></a>
             <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
       <div class="collapse navbar-collapse nav-align" style="max-width: max-content" id="navbarNavDropdown">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Testimonals
-                </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="{% url 'testimonial' %}">View Testimonials</a></li>
-              <li><a class="dropdown-item" href="{% url 'create_testimonial' %}">Create Testimonial</a>
-            </ul>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Blogs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-              </li>
-            <!--Admin only drop down items-->
-            {% if user.is_superuser %}
+              <!--Testimonial start-->
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Testimonals
+                  </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                      <li><a class="dropdown-item" href="{% url 'testimonial' %}">View Testimonials</a></li>
+                      <li><a class="dropdown-item" href="{% url 'create_testimonial' %}">Create Testimonial</a>
+                    </ul>
+                    <!--Testimonial end-->
+                    <!--Blog Start-->
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Blogs</a>
+                        </li>
+                        <!--Blog End-->
+                        <!--Contact Start-->
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                        </li>
+                        <!--Contact End-->
+                        
+                          <!--Admin only drop down items start-->
+                          {% if user.is_superuser %}
 
-              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Admin Only
-              </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin Only
+                          </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                 
-              <li><a class="dropdown-item" href="{% url 'create_blog' %}">Create Blog</a></li>
-              <li><a class="dropdown-item" href="{% url 'review_comments' %}">Review Comments</a></li>
-              <li><a class="dropdown-item" href="{% url 'review_testimonial' %}">Review Testimonials</a></li>
-              <li><a class="dropdown-item" href="{% url 'getmessage' %}">View Messages</a></li>
-              <li><a class="dropdown-item" href="{% url 'blog' %}">Review Blogs</a></li>
-              <li><a class="dropdown-item" href="{% url 'blogdraft' %}">Draft Blogs</a></li>
+                              <li><a class="dropdown-item" href="{% url 'create_blog' %}">Create Blog</a></li>
+                              <li><a class="dropdown-item" href="{% url 'review_comments' %}">Review Comments</a></li>
+                              <li><a class="dropdown-item" href="{% url 'review_testimonial' %}">Review Testimonials</a></li>
+                              <li><a class="dropdown-item" href="{% url 'getmessage' %}">View Messages</a></li>
+                              <li><a class="dropdown-item" href="{% url 'blog' %}">Review Blogs</a></li>
+                              <li><a class="dropdown-item" href="{% url 'blogdraft' %}">Draft Blogs</a></li>
 
           
-            </ul>
+                          </ul>
+                          <!--Admin End-->
             {% endif %}
               {% if user.is_authenticated %}
+              <!--Log start-->
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Log-Out
                   </a>
               {% else %}
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Log-In
                   </a>
               {% endif %}
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <ul class="dropdown-menu">
                 {% if user.is_authenticated %}
                   <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log-out</a></li>
                   {% else %}
@@ -97,6 +104,7 @@
                   <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
               {% endif %}
               </ul>
+              <!--Log end-->
                 </li>
               </ul>
         </div>
@@ -143,7 +151,7 @@
       let messages = document.getElementById("msg");
       let alert = new bootstrap.Alert(messages);
       alert.close();
-    }, 3000);
+    }, 4000);
 
   </script>
 

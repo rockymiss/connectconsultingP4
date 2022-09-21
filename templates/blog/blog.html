@@ -44,11 +44,11 @@
                   <p class="card-text">{{ blog.blog_subtitle }}</p>
                   <p class="card-text">Author: {{ blog.author }}</p>
                   <p class="card-text">Created on: {{ blog.blog_created_on }} 
-                    {{ post.number_of_favourites }}</p></p>
+                    {{ post.number_of_favourites }}</p>
                     
                 </div>
                 <div class="row align-self-center pb-1">
-                  <span pb-0>
+                  <span>
                     <a href="{% url 'blog_detail' blog.slug %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">View Blog</a>
                     {% if user.is_superuser %}
                       <a href="{% url 'blog_review' blog.slug %}" class="btn btn-primary grey-bg border border-dark rounded text-dark p-2">Edit</a>
@@ -67,7 +67,6 @@
             </div>
           </div>
         </div>
-    </div>
 </div>
 
 {% if is_paginated %}

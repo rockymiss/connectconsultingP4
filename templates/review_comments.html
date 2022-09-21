@@ -10,19 +10,12 @@
   <div class="spacer py-5"></div>
   <h1 class="fs-5 fw-bold"> Review Comments</h1>
     {% for comment in comments %}
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
+      <div class="accordion-item ">
+        <h2 class="accordion-header " id="headingOne">
+          
           <button class="accordion-button background-grad text-reset text-wrap" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <div class="p-0">
-          <p class="m-0">
-           Message from: 
-          </p>
-          <p class="m-0"> <strong>{{ comment.name }}</strong> ,&nbsp  
-          </p>
-          <p>
-            <small><small>{{ comment.comment_created }}</small></small>
-          </p>
-        </div>
+           Message from:- 
+          <strong>{{ comment.name }}</strong> 
           </button>
         </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
