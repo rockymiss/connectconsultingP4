@@ -188,11 +188,22 @@ This page gives more information about the CEO of the company and goes into deta
 <p align="center"><img src="static/images/readme/features/about-page.png"></p>
 </details>
 
-
-
 #### Blogs
 
+When you click on the link on the blog page the user is directed to a list of blogs that admin have published.  The user can decide which blog to view by clicking the 'View' button which then opens up a detailed view of the choosen blog.
+
 #### Blog Details
+
+This page will show the blog in detail, such as Title, subtitle, images and blog content.  This page also has a comment section.  If a user is logged in they can comment on posts and like posts.  
+
+<details open>
+<summary>Blog Detail</summary> 
+<p align="center"><img src="static/images/readme/features/blog-detail-top.png"></p>
+
+<p align="center"><img src="static/images/readme/features/blog-detail-comments.png"></p>
+</details>
+
+
 
 #### Update Blog
 
