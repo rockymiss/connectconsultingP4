@@ -4,8 +4,6 @@
 
 ### Html Validation
 
-Validation was carried out using 
-
 Html validation was done with [https://validator.w3.org/](https://validator.w3.org/). All pages were tested by manually inputting the code into the validator.
 
 There were a few issues in relation to validation
@@ -17,17 +15,23 @@ There were a few issues in relation to validation
 Despite numerous hours researching these errors unfortunately I was unable to fix the issue for now. 
 
 #### **Home Page**
+
 ![Home Page](static/images/readme/validation/index_valid.png)
 
 #### **About Page**
+
 ![About Page](static/images/readme/validation/about-valid.png)
 
 #### **User Sign-Up Pages**
+
 ![Sign-In Page](static/images/readme/validation/sign-in-validation.png)
 ![Sign-Out Page](static/images/readme/validation/sign-out-validation.png)
 ![Sign-Up Page](static/images/readme/validation/sign-up-validation.png)
 
 #### **Blog Pages**
+
+Errors showing are in relation to summernote as mentioned above.
+
 ![Blog List Page](static/images/readme/validation/create-blog-validation-errors.png)
 ![Delete Blog Page](static/images/readme/validation/delete-blog-validation.png)
 ![Update Blog Page](static/images/readme/validation/update-blog-validation.png)
@@ -40,6 +44,9 @@ Despite numerous hours researching these errors unfortunately I was unable to fi
 ![Delete Comment Page](static/images/readme/validation/delete-comment-validation.png)
 
 #### **Testimonial Pages**
+
+Errors showing are in relation to bootstrap errors as mentioned above.
+
 ![Create Testimonial Page](static/images/readme/validation/create-testimonial-valid.png)
 ![Review Testimonial Page](static/images/readme/validation/review-testimonial-validation.png)
 ![Approve Testimonial Page](static/images/readme/validation/approve-testimonial-validation.png)
@@ -47,6 +54,9 @@ Despite numerous hours researching these errors unfortunately I was unable to fi
 ![View Testimonial Page](static/images/readme/validation/view-testimonials-valid.png)
 
 #### **Contact pages**
+
+Errors showing are in relation to bootstrap errors as mentioned above. 
+
 ![Contact Us Page](static/images/readme/validation/contact-us-valid.png)
 ![View Messages Page](static/images/readme/validation/view-message-validation.png)
 ![Delete Messages Page](static/images/readme/validation/delete-message-valid.png)
@@ -69,7 +79,7 @@ The stylesheet was validated using [https://jigsaw.w3.org/css-validator/](https:
 Python code was validated using [http://pep8online.com/](http://pep8online.com/).  I also used the GitPod workspace to check for errors as I coded.  I found this useful as there were less errors once I ran the code through the validator. 
 
 
-#### blogcc
+### blogcc files
 
 ![pep8 admin.py](static/images/readme/pep8/blogcc-admin.png)
 
@@ -83,7 +93,7 @@ Python code was validated using [http://pep8online.com/](http://pep8online.com/)
 
 ![pep8 views.py](static/images/readme/pep8/blogcc-views.png)
 
-#### blogconnect
+### blogconnect files
 
 ![pep8 admin.py](static/images/readme/pep8/blogconnect-admin.png)
 
@@ -95,14 +105,15 @@ Python code was validated using [http://pep8online.com/](http://pep8online.com/)
 
 ![pep8 models.py](static/images/readme/pep8/blogconnect-models.png)
 
-Errors were noted doing a validation on settings.py however as most of the file is automatically created when installing Django I did not correct them as it made no difference to the workings of the website.  
+Errors were noted doing a validation on settings.py however as most of the file is automatically created when installing Django I did not correct them as it made no difference to the workings of the website.
+
 ![pep8 settings.py](static/images/readme/pep8/blogconnect-settings.png)
 
 ![pep8 urls.py](static/images/readme/pep8/blogconnect-urls.png)
 
 ![pep8 wsgi.py](static/images/readme/pep8/blogconnect-wsgi.png)
 
-#### contact
+### contact files
 
 ![pep8 admin.py](/workspace/connectconsultingp4/static/images/readme/pep8/contact-admin.png)
 
@@ -141,69 +152,218 @@ All pages were checked on lighthouse.  Results were over 90% for performance and
 
 ## Manual Testing
 
-To ensure that all elements of the website were working I carried out a detailed manual test and checked off the list as I went. 
+To ensure that all elements of the website were working I carried out a detailed manual test and checked off the list as I went.
 
 
 | Status | **Logged Out**
 |:-------:|:--------|
-| &check; |
-| &check; |
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Logged In**
 |:-------:|:--------|
-| &check; |
-| &check; |
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 
 | Status | **Admin Logged In**
-| &check; |
-| &check; |
+|:-------:|:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Nav Logged In**
-| &check; |
-| &check; |
+|:-------:|:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Nav Logged Out**
-| &check; |
-| &check; |
+|:-------:|:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Footer**
-| &check; |
-| &check; |
+|:-------:|:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Home Page**
-| &check; |
-| &check; |
+|:-------:|:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 
 | Status | **About**
 |:-------:|:--------|
-| &check; |
-| &check; |
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **View Testimonials**
 |:-------:|:--------|
-| &check; |
-| &check; |
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Create Testimonials**
 |:-------:|:--------|
-| &check; |
-| &check; |
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Blog List Page User Logged In**
 |:-------:|:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Blog List Page Admin Logged In**
 |:-------:|:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 | Status | **Blog List Page Logged Out**
 |:-------:|:--------|
-
-
-
-
-
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
+| &check; |:--------|
 
 ## Bugs
 
