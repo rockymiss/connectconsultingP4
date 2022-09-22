@@ -190,7 +190,7 @@ This page gives more information about the CEO of the company and goes into deta
 
 #### Blogs
 
-When you click on the link on the blog page the user is directed to a list of blogs that admin have published.  The user can decide which blog to view by clicking the 'View' button which then opens up a detailed view of the choosen blog.
+When you click on the link on the blog page the user is directed to a list of blogs that admin have published.  The user can decide which blog to view by clicking the 'View' button which then opens up a detailed view of the choosen blog.  If an Admin user is logged in they can see two other buttons, one for Editing the Blog and the other for Deleting the Blog.
 
 #### Blog Details
 
@@ -203,60 +203,76 @@ This page will show the blog in detail, such as Title, subtitle, images and blog
 <p align="center"><img src="static/images/readme/features/blog-detail-comments.png"></p>
 </details>
 
-
-
-#### Update Blog
-
-#### Delete Blog
-
 #### Testimonials
 
-#### Create Testimonials
+This page shows a list of testimonials that have been submitted by users.  They are three to a page and you can navigate through the pages easily to view all of the testimonials.
 
-#### Review Testimonials
+##### Create Testimonials
 
-#### Approve Testimonials 
+Users can create testimonials by completing this form.  Once submitted it is sent to admin for approval.  There is no functionality yet for the user to amend the testimonial or delete it.
 
-#### Contact 
+#### Contact
 
-#### Review Messages
+The contact page allows the user to contact the company without the use of an email system.  The user completes the form and the message will then be saved in the database for admin to view.
 
-#### Delete Messages 
+#### Admin-Only
+
+Admin only pages are accessed by admin users from the admin dropdown menu.
+
+##### Update Blog
+
+This consists of a form that is already populated with the blog content that the user can update if required.  
+
+##### Delete Blog
+
+Once the admin user clicks on Delete on the Blog List page they are directed to this page where they can either delete the blog or go back to the Blog List page if they change their mind. 
+
+##### Review Testimonials
+
+This page shows the admin user a list of testimonials not yet approved.  It is listed in an accordion so it is neat and easy for the user to see each testimomial submitted. It has two buttons, one to delete and the other to approve. 
+
+##### Approve Testimonials
+
+When an admin user clicks on the approve button in review testimonials they are directed to this page where they can either agree to approve or go back to testimonial reviews if they change their minds. 
+
+##### Review Messages
+
+This page shows the admin user a list of messages sent by users.  It is also listed in an accordion so it is neat and easy for the user to see each message received. They can then decide to keep the message or delete.  
+
+##### Delete Messages
+
+Once the admin user clicks Delete on the Review Messages page they are re-directed to this page where they can either delete the message or go back to review messages if they change their minds. 
 
 #### Sign-In
 
-#### Sign-Up 
+This page allows the user to sign in to the website to gain access to features like writing testimonials, making comments or liking a blog post.
+
+#### Sign-Up
+
+This page allows the user to sign-up to the website to gain access to features like writing testimonials, making comments or liking a blog post.
 
 #### Sign-Out
 
-
-
-
-Home
-<details open>
-<summary>Home</summary> 
-<p align="center"><img src=""></p>
-
-</details>
+This page allows the user to sign-out if they no longer require access to extra features. 
 
 -----
-## Technologies Used 
+## Technologies Used
 
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5) to provide content and structure to the website.
 - [CSS3](https://en.wikipedia.org/wiki/CSS) provides styles for the website.
-- [Python](https://www.python.org/) to provide functionality to the website. 
-- [a11y](https://color.a11y.com/Contrast/) to test contrast. 
+- [Python](https://www.python.org/) to provide functionality to the website.
+- [a11y](https://color.a11y.com/Contrast/) to test contrast.
 - [TinyPNG](https://tinypng.com/) to compress images.
-- [Cloudinary](https://cloudinary.com/) to store images. 
-- [GitPod](https://www.gitpod.io/) to create and edit the website. 
+- [Cloudinary](https://cloudinary.com/) to store images.
+- [GitPod](https://www.gitpod.io/) to create and edit the website.
 - [GitHub](https://github.com/) to host website
 - [GitBash](https://www.atlassian.com/git/tutorials/git-bash#:~:text=What%20is%20Git%20Bash%3F,operating%20system%20through%20written%20commands.) to push changes to GitHub.
-- [Heroku](https://id.heroku.com/login) to deploy the website. 
-- [Balsamiq](https://balsamiq.com/) to create wireframes. 
-- [Draw.io](https://drawio-app.com/) to create logic flow chart. 
+- [Heroku](https://id.heroku.com/login) to deploy the website.
+- [Balsamiq](https://balsamiq.com/) to create wireframes.
+- [Draw.io](https://drawio-app.com/) to create logic flow chart.
 - [vsCode](https://code.visualstudio.com/) to create logic flow chart.
-- [Google-Sheets](https://www.google.com/sheets/about/) to store username and scores. 
+- [Google-Sheets](https://www.google.com/sheets/about/) to store username and scores.
 - [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) to debug and test responsiveness.
 
 
