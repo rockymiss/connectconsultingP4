@@ -7,6 +7,7 @@ from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.views import generic, View
 from django.urls import reverse_lazy
 from django.utils.text import slugify
@@ -114,7 +115,7 @@ class BlogDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
- 
+
         else:
             comment_form = CreateComment()
 
@@ -242,7 +243,7 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
         return super().form_valid(form)
 
 
-class BlogUpdate(UserPassesTestMixin, UpdateView):
+class BlogUpdate(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     """
     Admin who is logged in can edit any blogs
     that they have created
@@ -259,6 +260,7 @@ class BlogUpdate(UserPassesTestMixin, UpdateView):
 
     template_name = 'blog/blog_review.html'
     success_url = reverse_lazy('blog')
+    success_message = "Your blog has been updated"
 
     def test_func(self):
         """
@@ -276,6 +278,7 @@ class BlogDelete(UserPassesTestMixin, DeleteView):
     context_object_name = "bloglist"
     template_name = 'blog/blog_delete.html'
     success_url = reverse_lazy('blog')
+    success_message = "Your blog has been deleted"
 
     def test_func(self):
         """
@@ -345,14 +348,13 @@ class ApproveComment(UserPassesTestMixin, View):
         """
         gets the comment the user made and checks
         if the comment has been approved.  Admin can
-        the approve the comment
+        then approve the comment
         """
 
         comment = get_object_or_404(BlogComment, pk=pk)
         if request.method == "POST":
             comment.approve = True
             comment.save()
-
         return redirect('review_comments')
 
 
@@ -391,7 +393,6 @@ class DeleteComment(UserPassesTestMixin, DeleteView):
 
         comment = get_object_or_404(BlogComment, pk=pk)
         comment.delete()
-
         return redirect('review_comments')
 
 
