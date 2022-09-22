@@ -2,25 +2,21 @@
 <title>Page Not Found</title>
 {% endblock %}{% block content %}
 
-<section id='error' class="d-flex justify-content-center pt-5 pb-5">
+<section id='error' class="index-content background">
+      <!--spacer to push page below navbar-->
+      <div class="spacer py-5"></div>
+
   <div class="row justify-content-center align-items-center">
-    <div class="col col-md-8">
+    <div class="col">
       <div class="row align-items-center">
-        <div class="col col-md-6">
-          <h1 class="error-heading text-center p-bold">404</h1>
-          <h2 class="text-center p-bold">Oops you've lost your way.  Click on our logo in the navbar to find your way home.</h2>
+        <div class="col">
+          <h1 class="error-heading text-center p-bold">Oops you've lost your way.</h1>
+          <h2 class="text-center p-bold"> Click on our logo in the navbar to find your way home.</h2>
         </div>
-        
-          <img
-            src="https://res.cloudinary.com/rockymiss/image/upload/v1663498185/connectconsulting/Logo_nqqshq.png"
-            alt="Image of connect consulting logo"
-            height="250"
-            width="250"
-          />
+      
         </div>
       </div>
     </div>
-  </div>
 </section>
 
 {% endblock %}
