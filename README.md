@@ -120,9 +120,84 @@ While the site has changed somewhat since the beginning of the project, wirefram
 
 <p align="center"><img src="https://res.cloudinary.com/rockymiss/image/upload/v1663781299/connectconsulting/readme/database-schema_lyvxji.png"></p>
 
+## Site Structure 
+
+The website consists of 16 pages.  The main pages are Home, About, Blogs, Testimonials, Contact and the Sign-up pages all of which can be accessed by all users.  Some pages are only visiable when logged in, particularly for the Admin User, such as  #### Update Blog, Delete Blog, Review Testimonials, Approve Testimonials, Review Messages and Delete Messages.  There is a comment and favourite section in the blog which can only be accessed by Admin or Users that are logged in. 
+
+Once a user is logged in the Log-in link on the navigation bar changes to Log-Out.
+
+Once the admin is logged in an Admin Only menu appears on the navigation bar, which only admin can view an access. 
+
+## Design
+
+### Colours
+
+The use of colour is to keep this as simple as possible. Clean and clear allowing the content to shine.  The use of a tint of yellow is to symbolise white wine. In future other colours may be added to symbolise red wine.  All colours are used as a gradient for some headers on the testimonials and review messages.
+
+![Colour Palette](static/images/readme/misc/color-palette.png)
+
+![Gradient](static/images/readme/misc/color-palette.png)
+
+
+### Typography
+
+Montserrat was the only font used for this website, again to keep the website, clean and simple.
+
 
 ## Features
+
 ### Existing Features
+
+#### Navigation
+
+Navigation appears on each page.  The design remains consistent throughout, however the menu options change depending of whether a user or admin user is logged in or out. 
+
+<details open>
+<summary>Navigation</summary> 
+<p align="center"><img src="static/images/readme/features/nav.png"></p>
+
+</details>
+
+
+
+#### Home Page
+
+
+
+#### Footer
+
+#### About
+
+#### Blogs
+
+#### Blog Details
+
+#### Update Blog
+
+#### Delete Blog
+
+#### Testimonials
+
+#### Create Testimonials
+
+#### Review Testimonials
+
+#### Approve Testimonials 
+
+#### Contact 
+
+#### Review Messages
+
+#### Delete Messages 
+
+#### Sign-In
+
+#### Sign-Up 
+
+#### Sign-Out
+
+
+
 
 Home
 <details open>
