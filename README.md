@@ -156,8 +156,13 @@ Navigation appears on each page.  The design remains consistent throughout, howe
 <summary>Navigation</summary> 
 <p align="center"><img src="static/images/readme/features/nav.png"></p>
 
-</details>
+<p align="center"><img src="static/images/readme/features/nav-login.png"></p>
 
+<p align="center"><img src="static/images/readme/features/nav-testimonials.png"></p>
+
+<p align="center"><img src="static/images/readme/features/nav-admin.png"></p>
+
+</details>
 
 
 #### Home Page
