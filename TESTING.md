@@ -66,44 +66,64 @@ The stylesheet was validated using [https://jigsaw.w3.org/css-validator/](https:
 
 ### Python Validation
 
-Python code was validated using [http://pep8online.com/](http://pep8online.com/)
-
+Python code was validated using [http://pep8online.com/](http://pep8online.com/).  I also used the GitPod workspace to check for errors as I coded.  I found this useful as there were less errors once I ran the code through the validator. 
 
 
 #### blogcc
 
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
+![pep8 admin.py](static/images/readme/pep8/blogcc-admin.png)
+
+![pep8 apps.py](static/images/readme/pep8/blogcc-apps.png)
+
+![pep8 forms.py](static/images/readme/pep8/blogcc-forms.png)
+
+![pep8 models.py](static/images/readme/pep8/blogcc-models.png)
+
+![pep8 urls.py](static/images/readme/pep8/blogcc-urls.png)
+
+![pep8 views.py](static/images/readme/pep8/blogcc-views.png)
 
 #### blogconnect
 
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
+![pep8 admin.py](static/images/readme/pep8/blogconnect-admin.png)
+
+![pep8 apps.py](static/images/readme/pep8/blogconnect-apps.png)
+
+![pep8 asgi.py](static/images/readme/pep8/blogconnect-asgi.png)
+
+![pep8 froms.py](static/images/readme/pep8/blogconnect-forms.png)
+
+![pep8 models.py](static/images/readme/pep8/blogconnect-models.png)
+
+Errors were noted doing a validation on settings.py however as most of the file is automatically created when installing Django I did not correct them as it made no difference to the workings of the website.  
+![pep8 settings.py](static/images/readme/pep8/blogconnect-settings.png)
+
+![pep8 urls.py](static/images/readme/pep8/blogconnect-urls.png)
+
+![pep8 wsgi.py](static/images/readme/pep8/blogconnect-wsgi.png)
 
 #### contact
 
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
-![pep8]()
+![pep8 admin.py](/workspace/connectconsultingp4/static/images/readme/pep8/contact-admin.png)
+
+![pep8 apps.py](static/images/readme/pep8/contact-apps.png)
+
+![pep8 forms.py](static/images/readme/pep8/contact-forms.png)
+
+![pep8 models.py](static/images/readme/pep8/contact-models.png)
+
+![pep8 urls.py](static/images/readme/pep8/contact-urls.png)
+
+![pep8 views.py](static/images/readme/pep8/contact-views.png)
+
+#### Gitpod Workspace
+
+![Workspace](static/images/readme/pep8/contact-views.png)
 
 
 ## Lighthouse Testing
 
-All pages were checked on lighthouse.  Results were over 80% for performance and best practice and 100% on Accessability and SEO on both mobile and desktop.  On the first test performance was very poor.  This was fixed by applying height and width to an image.
+All pages were checked on lighthouse.  Results were over 90% for performance and best practice and 100% on Accessability and SEO on both mobile and desktop.  On the first test performance was very poor.  This was fixed by applying height and width to an image.
 
 
 ### **First Test**
