@@ -167,6 +167,15 @@ Navigation appears on each page.  The design remains consistent throughout, howe
 
 #### Home Page
 
+This page is the landing page and is the first page that users will see when the site loads.  The page has a logo clearly showing that the website is about hospitalilty specialists.  Information about what the company do is shown on this page. 
+
+<details open>
+<summary>Navigation</summary> 
+<p align="center"><img src="static/images/readme/features/homepage.png"></p>
+
+
+</details>
+
 
 
 #### Footer
