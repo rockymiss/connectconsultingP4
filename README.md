@@ -170,17 +170,25 @@ Navigation appears on each page.  The design remains consistent throughout, howe
 This page is the landing page and is the first page that users will see when the site loads.  The page has a logo clearly showing that the website is about hospitalilty specialists.  Information about what the company do is shown on this page. 
 
 <details open>
-<summary>Navigation</summary> 
+<summary>Home Page</summary> 
 <p align="center"><img src="static/images/readme/features/homepage.png"></p>
-
-
 </details>
-
-
 
 #### Footer
 
+The footer simply directs the user to all social media links. It is consistent throughout the websiste and remains at the bottom of the page. For the purpose of this project the links will open the social media pages but not the companys social media as they are not yet set up. 
+
+
 #### About
+
+This page gives more information about the CEO of the company and goes into detail of what the company is about.  An image of the CEO is at the top of the page.  I felt it was important to put a face to the company. 
+
+<details open>
+<summary>About Page</summary> 
+<p align="center"><img src="static/images/readme/features/about-page.png"></p>
+</details>
+
+
 
 #### Blogs
 
