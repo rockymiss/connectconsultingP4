@@ -154,216 +154,223 @@ All pages were checked on lighthouse.  Results were over 90% for performance and
 
 To ensure that all elements of the website were working I carried out a detailed manual test and checked off the list as I went.
 
-
-| Status | **Logged Out**
+| Status | **Navigation Logged Out**
 |:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
+| &check; |:Clicking the Connect Consulting Logo brings you to the homepage
+| &check; |:The only menus that can be viewed are About, Testimonials, Blogs, Contact Us and Login
+| &check; |:On the Testimonials drop down View Testimonials and Create Testimonials can be viewed
+| &check; |:On the Login drop down Log-In and Register can only be viewd
+| &check; |:The Admin Only drop down cannot be viewed
+| &check; |:Clicking About brings you to the about page
+| &check; |:Clicking Testimonials opens a dropdown menu showing View Testimonals and Create Testimonials
+| &check; |:Clicking View Testimonials brings you to the View Testimonials page
+| &check; |:Clicking Create Testimonials brings you to the Sign-In page
+| &check; |:Clicking Blogs brings you to the Blog list page
+| &check; |:Clicking Contact Us brings you to the Contact page
+| &check; |:Clicking Log-In opens a dropdown menu showing Log-in and Register
+| &check; |:Clicking Log-In opens a the Sign-In page
+| &check; |:Clicking Register opens the Sign-Up page
 
-| Status | **Logged In**
+| Status | **Navigation Logged In - User**
 |:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-
-
-| Status | **Admin Logged In**
-|:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-
-| Status | **Nav Logged In**
-|:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-
-| Status | **Nav Logged Out**
-|:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-
-| Status | **Footer**
-|:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
+| &check; |:Clicking the Connect Consulting Logo brings you to the homepage
+| &check; |:The only menus that can be viewed are About, Testimonials, Blogs, Contact Us and Logout
+| &check; |:On the Testimonials drop down View Testimonials and Create Testimonials can be viewed
+| &check; |:On the Logout drop down Log-Out can only be viewd
+| &check; |:The Admin Only drop down cannot be viewed
+| &check; |:Clicking About brings you to the about page
+| &check; |:Clicking Testimonials opens a dropdown menu showing View Testimonals and Create Testimonials
+| &check; |:Clicking View Testimonials brings you to the View Testimonials page
+| &check; |:Clicking Create Testimonials brings you to the Create Testimonials page
+| &check; |:Clicking Blogs brings you to the Blog list page
+| &check; |:Clicking Contact Us brings you to the Contact page
+| &check; |:Clicking Log-out opens a dropdown menu showing Log-out
+| &check; |:Clicking Log-out opens a the Sign-Out page asking the user if they are sure they want to sign out
 
 | Status | **Home Page**
 |:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
+| &check; |: All users should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: All users should see a footer at the bottom of the page
+| &check; |: All users should see a white background with some circular yellow shape in it
+| &check; |: All users should see a CC logo at the top of the page with the words Hospitality Specialists written over it 
+| &check; |: All users should see a Heading with the words 'Who dares wins'
+| &check; |: All users should see information about Connect Consulting which clearly sets out what Connect Consulting do
 
 
 | Status | **About**
 |:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
+| &check; |: All users should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: All users should see a footer at the bottom of the page
+| &check; |: All users should see a white background with some circular yellow shape in it
+| &check; |: All users should see an image of a smiling man wearing glasses leaning up against a wall
+| &check; |: All users should see information about that man and what Connect Consulting do and why the user should use their services.
+
 
 | Status | **View Testimonials**
 |:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see testimonials, 3 to a page in cards with a header showing the company name and the content below with the date the Testimonial was created
+| &check; |: The header of each card should have a gradient effect
+| &check; |: The user should see a button on the bottom of the page with the word 'Next' if there are more than 3 testimonials.
+| &check; |: The user should be brought to another page of testimonials if they click the Next button 
+| &check; |: The user should see two buttons with the words 'Prev' and 'Next' on the second page or any subsequent page
+| &check; |: The user should be brought back to the previous page if they click the 'Prev' button 
+| &check; |: The user should only see the button 'Prev' on the last page of testimonials
 
-| Status | **Create Testimonials**
-|:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
 
-| Status | **Blog List Page User Logged In**
+| Status | **Create Testimonials Logged In-User**
 |:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see a form with the heading 'Create your Testimonial'
+| &check; |: The user should see input fields for Name, Company Name and Content
+| &check; |: The user should see a functional submit button at the bottom of the form
+| &check; |: If the user completes the form fully and clicks submit they should see a message at the top of the page telling them the testimonial has been submitted for approval to admin
+| &check; |: If the user does not complete the 'Name' field the user will get an error message 
+| &check; |: if the user does not complete the 'Company Name' field the user will get an error message
+| &check; |: If the user does not complete the 'Content' field the user will get an error message
 
-| Status | **Blog List Page Admin Logged In**
+| Status | **Blogs/Blog List Logged or Not Logged In**
 |:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see blogs, 3 to a page in cards with a header showing a picture, The title of the blog, the subtitle, the author and the date created
+| &check; |: The user should only see a button 'View Blog'
+| &check; |: If the user clicks on 'View Blog' it should direct them to the detailed view of the Blog on it's own
+| &check; |: The user should see a button on the bottom of the page with the word 'Next' if there are more than 3 Blogs.
+| &check; |: The user should be brought to another page of blogs if they click the Next button 
+| &check; |: The user should see two buttons with the words 'Prev' and 'Next' on the second page or any subsequent page
+| &check; |: The user should be brought back to the previous page if they click the 'Prev' button 
+| &check; |: The user should only see the button 'Prev' on the last page of testimonials
 
-| Status | **Blog List Page Logged Out**
+| Status | **Blog/BlogList Logged-In Admin User**
 |:-------:|:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
-| &check; |:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a button called 'draft blogs' and when clicked will bring the admin user to a page of blogs not yet publically posted
+| &check; |: The admin user should see blogs, 3 to a page in cards with a header showing a picture, The title of the blog, the subtitle, the author and the date created
+| &check; |: The admin user should see three buttons below the blog: 'View Blog', 'Edit' and 'Delete'
+| &check; |: If the admin user clicks on 'View Blog' it should direct them to the detailed view of the Blog on it's own
+| &check; |: If the admin user clicks on 'Edit' it should direct them to the detailed view of the Blog to edit the blog
+| &check; |: If the admin user clicks on 'Delete' it should direct them to page asking them if they are sure they want to delete the blog
+| &check; |: The user should see a button on the bottom of the page with the word 'Next' if there are more than 3 Blogs.
+| &check; |: The user should be brought to another page of blogs if they click the Next button 
+| &check; |: The user should see two buttons with the words 'Prev' and 'Next' on the second page or any subsequent page
+| &check; |: The user should be brought back to the previous page if they click the 'Prev' button 
+| &check; |: The user should only see the button 'Prev' on the last page of testimonials
+
+
+| Status | **Contact Us**
+|:-------:|:--------|
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see a heading with the message 'Send us a message'
+| &check; |: The user should see a form to complete with fields: 'First name', 'Last name', 'Email', and 'Message'
+| &check; |: The user should get an error message if they don't complete the form fully
+| &check; |: The user should see a default email in the email field (this is for testing purposes so users for now do not have to put in their real email address)
+| &check; |: The user should see placeholder text in the message field saying 'We would love to hear from you'
+| &check; |: If the user completes the form correctly they should be redirected to a thank you page when they click submit
+
+| Status | **Thank You**
+|:-------:|:--------|
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see the CC Connect Consulting logo with the message 'Thank you for your message'
+
+| Status | **Log-out User and Admin**
+|:-------:|:--------|
+| &check; |: If the user clicks 'Log-Out' on the menu bar they should be directed to a sign-Out Page asking them are they sure they want to sign out. 
+| &check; |: The user should see a heading 'Sign Out' and a message saying 'Are you sure you want to sign out'
+| &check; |: The user should see a button with the words 'Sign Out' and once clicked will sign the user out. 
+| &check; |: The user should be redirected to the homepage and see a message confirming that they have signed out. 
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see the CC Connect Consulting logo with the message 'Thank you for your message'
+
+| Status | **Log-in User and Admin**
+|:-------:|:--------|
+| &check; |: If the user clicks 'Log-In' on the menu bar they should be directed to a sign-in Page 
+| &check; |: The user should see a heading 'Sign In' and a message saying 'You must be signed in to leave a comment or create a testimonial'
+| &check; |: The user should see a 'Username' field and 'password field. 
+| &check; |: The user should see a small tick box with the words 'Remember me'.  If selected they will be remembered the next time they log in.
+| &check; |: The user should see a 'Sign In' button and when clicked will bring the user to the homepage where a message will pop up telling the user they have successfully signed in.
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see the CC Connect Consulting logo with the message 'Thank you for your message'
+
+ Status | **Register**
+|:-------:|:--------|
+| &check; |: If the user clicks 'Log-In' on the menu bar they should see 'Register' in the dropdown list'  Once clicked it should open the Sign-up page. 
+| &check; |: The user should see a heading 'Sign Up' and a message saying if they already have an account then to click the signin click'
+| &check; |: The user should be directed to the Sign-In page if they click the sign-in link
+| &check; |: The user should see the fields 'Username', 'Email', 'Password' and 'Password Again'. 
+| &check; |: The user should see a 'Sign Up' button and when clicked will bring the user to the homepage where a message will pop up telling the user they have successfully signed up.
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see the CC Connect Consulting logo with the message 'Thank you for your message'
+
+
+| Status | **Blog Detail Logged Out**
+|:-------:|:--------|
+ &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see the CC Connect Consulting logo with the message 'Thank you for your 
+| &check; |: The user should see the title of the Blog Post and an image
+| &check; |: The user should see blog content
+| &check; |: Below the blog content the user should see another image 
+| &check; |: The user will see a star and how many likes the blog got
+| &check; |: The user shoulld see a comments section with comments
+| &check; |: The user should see a message saying you must be logged in to leave comments
+| &check; |: The user will see a button with the words 'Login' and once clicked will direct them to the login page
+
+| Status | **Blog Detail Logged In**
+|:-------:|:--------|
+ &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+| &check; |: The user should see the CC Connect Consulting logo with the message 'Thank you for your 
+| &check; |: The user should see the title of the Blog Post and an image
+| &check; |: The user should see blog content
+| &check; |: Below the blog content the user should see another image 
+| &check; |: The user will see a star and how many likes the blog got
+| &check; |: The user should see a star and once clicked the star will change color and the number will increase beside it
+| &check; |: The user should see a comments section with comments
+| &check; |: The user should see a message saying 'Leave a comment' and their name underneath it
+| &check; |: The user should see a comment body where they can write a comment
+| &check; |: The user should see a submit button and once clicked they will get a message saying their comment has been sent to admin for approval.
+
+| Status | **Update Blog Logged-In Admin User**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a fully populated form with the blog information to edit
+| &check; |: The admin user should be able to edit any details of the blog including images
+| &check; |: The admin user should see a Submit button, once clicked will redirect the admin user back to the blog list message where a message will pop up saying the blog has been updated.
+
+| Status | **Delete Blog Logged-In Admin User**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a button on the blog list with the word 'Delete'
+| &check; |: The admin user should be re-directed to a page asking the user if they are sure they want to delete the blog.
+| &check; |: The admin user should see two buttons 'Yes' and 'Go Back'
+| &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the blog list page. 
+| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the blog list page where a message will confirm that the blog has been deleted.
+
+
+
 
 ## Bugs
 
