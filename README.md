@@ -126,7 +126,7 @@ The website consists of 16 pages.  The main pages are Home, About, Blogs, Testim
 
 Once a user is logged in the Log-in link on the navigation bar changes to Log-Out.
 
-Once the admin is logged in an Admin Only menu appears on the navigation bar, which only admin can view an access. 
+Once the admin is logged in an Admin Only menu appears on the navigation bar, which only admin can view an access.
 
 ## Design
 
@@ -136,7 +136,7 @@ The use of colour is to keep this as simple as possible. Clean and clear allowin
 
 ![Colour Palette](static/images/readme/misc/color-palette.png)
 
-![Gradient](static/images/readme/misc/color-palette.png)
+![Gradient](static/images/readme/misc/gradient.png)
 
 
 ### Typography
