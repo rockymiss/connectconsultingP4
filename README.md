@@ -284,8 +284,9 @@ This page allows the user to sign-out if they no longer require access to extra 
 - [Pexels](https://www.pexels.com/) for images
 
 
-### Other images and content
-Images of the CEO are owned by Connect Consulting and I have been given full permission to use them on the website.  Content has also been provided by Connect Consulting and permission has been given to use it.
+### Headshots Logo and content
+
+Images of the CEO and logos are owned by Connect Consulting and I have been given full permission to use them on the website.  Content has also been provided by Connect Consulting and permission has been given to use it.
 -----
 
 ## Testing
@@ -316,18 +317,18 @@ Deployment is done after Creating the Django Project in your virtual environment
 
 | Status | **Steps**
 |:-------:|:--------|
-| Install Django and gunicorn|: pip install django gunicorn 
-| Install any supporting libraries|: pip install dj_database_url psycopg2
-| Create requirements.txt|: pip3 freeze --local > requirements.txt
-| Create Django Project  |: django-admin startproject **project name**
+| Install Django and gunicorn| pip install django gunicorn 
+| Install any supporting libraries| pip install dj_database_url psycopg2
+| Create requirements.txt| pip3 freeze --local > requirements.txt
+| Create Django Project  | django-admin startproject **project name**
 | Create apps |: python manage.py startapp **app name**
-| Add app to list of installed apps in settings.py |:--------| 
-| Make migrations |: python3 manage.py makemigrations
-| Migrate Changes |: python3 manage.py migrate
-| Test server locally |: python3 manage.py runserver
-| Procfile |: python run.py > Procfile
-| Push changes to github repository |: git add. git commit and git push
-| Create new app on Heroku |: https://dashboard.heroku.com/
+| Add app to list of installed apps in settings.py || 
+| Make migrations | python3 manage.py makemigrations
+| Migrate Changes | python3 manage.py migrate
+| Test server locally | python3 manage.py runserver
+| Procfile | python run.py > Procfile
+| Push changes to github repository | git add. git commit and git push
+| Create new app on Heroku | https://dashboard.heroku.com/
 
 
 As the database is stored locally in Postgres on your workspace, Heroku cannot see this data. It's recommended to not migrate your existing database to Heroku as you may store sensitive data such user accounts and personal information.  A new database will need to be created that Heroku can house. 
