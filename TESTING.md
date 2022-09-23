@@ -229,7 +229,7 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: All users should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
 | &check; |: All users should see a footer at the bottom of the page
 | &check; |: All users should see a white background with some circular yellow shape in it
-| &check; |: All users should see a CC logo at the top of the page with the words Hospitality Specialists written over it 
+| &check; |: All users should see a CC logo at the top of the page with the words Hospitality Specialists written over it
 | &check; |: All users should see a Heading with the words 'Who dares wins'
 | &check; |: All users should see information about Connect Consulting which clearly sets out what Connect Consulting do
 
@@ -251,9 +251,9 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: The user should see testimonials, 3 to a page in cards with a header showing the company name and the content below with the date the Testimonial was created
 | &check; |: The header of each card should have a gradient effect
 | &check; |: The user should see a button on the bottom of the page with the word 'Next' if there are more than 3 testimonials.
-| &check; |: The user should be brought to another page of testimonials if they click the Next button 
+| &check; |: The user should be brought to another page of testimonials if they click the Next button
 | &check; |: The user should see two buttons with the words 'Prev' and 'Next' on the second page or any subsequent page
-| &check; |: The user should be brought back to the previous page if they click the 'Prev' button 
+| &check; |: The user should be brought back to the previous page if they click the 'Prev' button
 | &check; |: The user should only see the button 'Prev' on the last page of testimonials
 
 
@@ -266,7 +266,7 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: The user should see input fields for Name, Company Name and Content
 | &check; |: The user should see a functional submit button at the bottom of the form
 | &check; |: If the user completes the form fully and clicks submit they should see a message at the top of the page telling them the testimonial has been submitted for approval to admin
-| &check; |: If the user does not complete the 'Name' field the user will get an error message 
+| &check; |: If the user does not complete the 'Name' field the user will get an error message
 | &check; |: if the user does not complete the 'Company Name' field the user will get an error message
 | &check; |: If the user does not complete the 'Content' field the user will get an error message
 
@@ -279,9 +279,9 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: The user should only see a button 'View Blog'
 | &check; |: If the user clicks on 'View Blog' it should direct them to the detailed view of the Blog on it's own
 | &check; |: The user should see a button on the bottom of the page with the word 'Next' if there are more than 3 Blogs.
-| &check; |: The user should be brought to another page of blogs if they click the Next button 
+| &check; |: The user should be brought to another page of blogs if they click the Next button
 | &check; |: The user should see two buttons with the words 'Prev' and 'Next' on the second page or any subsequent page
-| &check; |: The user should be brought back to the previous page if they click the 'Prev' button 
+| &check; |: The user should be brought back to the previous page if they click the 'Prev' button
 | &check; |: The user should only see the button 'Prev' on the last page of testimonials
 
 | Status | **Blog/BlogList Logged-In Admin User**
@@ -296,9 +296,9 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: If the admin user clicks on 'Edit' it should direct them to the detailed view of the Blog to edit the blog
 | &check; |: If the admin user clicks on 'Delete' it should direct them to page asking them if they are sure they want to delete the blog
 | &check; |: The user should see a button on the bottom of the page with the word 'Next' if there are more than 3 Blogs.
-| &check; |: The user should be brought to another page of blogs if they click the Next button 
+| &check; |: The user should be brought to another page of blogs if they click the Next button
 | &check; |: The user should see two buttons with the words 'Prev' and 'Next' on the second page or any subsequent page
-| &check; |: The user should be brought back to the previous page if they click the 'Prev' button 
+| &check; |: The user should be brought back to the previous page if they click the 'Prev' button
 | &check; |: The user should only see the button 'Prev' on the last page of testimonials
 
 
@@ -498,9 +498,9 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: If the admin user clicks on 'Edit' it should direct them to the detailed view of the Blog to edit the blog
 | &check; |: If the admin user clicks on 'Delete' it should direct them to page asking them if they are sure they want to delete the blog
 | &check; |: The user should see a button on the bottom of the page with the word 'Next' if there are more than 3 draft Blogs.
-| &check; |: The user should be brought to another page of draft blogs if they click the Next button 
+| &check; |: The user should be brought to another page of draft blogs if they click the Next button
 | &check; |: The user should see two buttons with the words 'Prev' and 'Next' on the second page or any subsequent page
-| &check; |: The user should be brought back to the previous page if they click the 'Prev' button 
+| &check; |: The user should be brought back to the previous page if they click the 'Prev' button
 | &check; |: The user should only see the button 'Prev' on the last page of testimonials
 
 
@@ -529,17 +529,16 @@ To ensure that all elements of the website were working I carried out a detailed
 
 ## Bugs
 
-###
+### Migrations
 
-I got this error when making migrations.   After searching for a solution in the Code Institute’s Slack community group  I discovered that when Heroku run maintenance on your apps they update your database.   I copied the new link from heroku config vars and updated the DATABASE_URL in the env.py file.
+I got a fatal error when making migrations.   After searching for a solution in the Code Institute’s Slack community group  I discovered that when Heroku run maintenance on your apps they update your database.   I copied the new link from heroku config vars and updated the DATABASE_URL in the env.py file.
 
 <details open>
-<summary>Update Database Bug</summary> 
+<summary>Update Database Bug</summary>
 <p align="center"><img src="static/images/readme/misc/update-database.png"></p>
 
 </details>
 
-static/images/readme/misc/update-database.png
+### Value Field Error
 
-**Fix:**
-https://connect-consultingp4.herokuapp.com/blog_draft/
+When I added a new email field to the contact model I received a value field error as I had put in an incorrect default.  I deleted those migrations and corrected it when I updated the model again.
