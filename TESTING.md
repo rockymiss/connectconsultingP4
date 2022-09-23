@@ -81,49 +81,86 @@ Python code was validated using [http://pep8online.com/](http://pep8online.com/)
 
 ### blogcc files
 
+#### admin.py
+
 ![pep8 admin.py](static/images/readme/pep8/blogcc-admin.png)
+
+#### apps.py
 
 ![pep8 apps.py](static/images/readme/pep8/blogcc-apps.png)
 
+#### forms.py
+
 ![pep8 forms.py](static/images/readme/pep8/blogcc-forms.png)
+
+#### models.py
 
 ![pep8 models.py](static/images/readme/pep8/blogcc-models.png)
 
+#### urls.py
+
 ![pep8 urls.py](static/images/readme/pep8/blogcc-urls.png)
+
+#### views.py
 
 ![pep8 views.py](static/images/readme/pep8/blogcc-views.png)
 
 ### blogconnect files
 
+#### admin.py
+
 ![pep8 admin.py](static/images/readme/pep8/blogconnect-admin.png)
+
+#### apps.py
 
 ![pep8 apps.py](static/images/readme/pep8/blogconnect-apps.png)
 
+#### asgi.py
+
 ![pep8 asgi.py](static/images/readme/pep8/blogconnect-asgi.png)
 
-![pep8 froms.py](static/images/readme/pep8/blogconnect-forms.png)
+#### forms.py
+
+![pep8 forms.py](static/images/readme/pep8/blogconnect-forms.png)
+
+#### models.py
 
 ![pep8 models.py](static/images/readme/pep8/blogconnect-models.png)
 
 Errors were noted doing a validation on settings.py however as most of the file is automatically created when installing Django I did not correct them as it made no difference to the workings of the website.
 
+#### settings.py
 ![pep8 settings.py](static/images/readme/pep8/blogconnect-settings.png)
 
+#### urls.py
 ![pep8 urls.py](static/images/readme/pep8/blogconnect-urls.png)
 
+#### wsgi.py
 ![pep8 wsgi.py](static/images/readme/pep8/blogconnect-wsgi.png)
 
 ### contact files
 
+#### admin.py
+
 ![pep8 admin.py](/workspace/connectconsultingp4/static/images/readme/pep8/contact-admin.png)
+
+#### apps.py
 
 ![pep8 apps.py](static/images/readme/pep8/contact-apps.png)
 
+#### forms.py
+
 ![pep8 forms.py](static/images/readme/pep8/contact-forms.png)
+
+#### models.py
 
 ![pep8 models.py](static/images/readme/pep8/contact-models.png)
 
+#### urls.py
+
 ![pep8 urls.py](static/images/readme/pep8/contact-urls.png)
+
+#### views.py
 
 ![pep8 views.py](static/images/readme/pep8/contact-views.png)
 
