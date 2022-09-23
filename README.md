@@ -338,14 +338,13 @@ As the database is stored locally in Postgres on your workspace, Heroku cannot s
 1. Click on "Settings" tab and open "Config Vars" where you will see that a new Postgrest database URL has been automatically applied.
 1. The following environment variables should be included:
 
-
+| Status | **Environment Variables**
 |:-------:|:--------|
-| DATABASE_URL |:
-| CLOUDINARY_URL|: Found on cloudinary dashboard
-| PORT |: 8000
-| SECRET_KEY |: Key or your choice
-| DEBUG |: Set to True
-
+| DATABASE_URL ||
+| CLOUDINARY_URL| Found on cloudinary dashboard|
+| PORT | 8000|
+| SECRET_KEY |: Key or your choice|
+| DEBUG | Set to True|
 
 
   ### Fork a Repository: 
