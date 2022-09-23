@@ -180,7 +180,7 @@ All pages were checked on lighthouse.  Results were over 90% for performance and
 
 ### **Lighthouse Picture Performance**
 
-![Lighthouse Picture Performance](static/images/readme/misc/Lighthouse-fix-test.png)
+![Lighthouse Picture Performance](static/images/readme/misc/Lighthouse-pictures-width.png)
 
 ### **Final Test**
 
