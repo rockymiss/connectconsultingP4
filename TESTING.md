@@ -531,7 +531,15 @@ To ensure that all elements of the website were working I carried out a detailed
 
 ###
 
+I got this error when making migrations.   After searching for a solution in the Code Institute’s Slack community group  I discovered that when Heroku run maintenance on your apps they update your database.   I copied the new link from heroku config vars and updated the DATABASE_URL in the env.py file.
 
+<details open>
+<summary>Update Database Bug</summary> 
+<p align="center"><img src="static/images/readme/misc/update-database.png"></p>
+
+</details>
+
+static/images/readme/misc/update-database.png
 
 **Fix:**
 https://connect-consultingp4.herokuapp.com/blog_draft/
