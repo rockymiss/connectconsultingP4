@@ -478,7 +478,7 @@ class ApproveTestimon(LoginRequiredMixin, View):
             testimonial.save()
         messages.success(
             self.request,
-            'The Testimonial has been posted to the blog')
+            'The Testimonial has been posted')
         return redirect('review_testimonial')
 
 
@@ -519,5 +519,5 @@ class DeleteTestimonial(LoginRequiredMixin, DeleteView):
         testimonial.delete()
         messages.success(
             self.request,
-            'The comment has been deleted')
+            'The testimonial has been deleted')
         return redirect('review_testimonial')
