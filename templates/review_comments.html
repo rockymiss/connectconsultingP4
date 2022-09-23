@@ -8,6 +8,14 @@
 <div class="accordion index-content background" id="accordionExample">
   <!--spacer to push page below navbar-->
   <div class="spacer py-5"></div>
+  {% if messages %}
+    <!--Success messages -->
+        <div class="messages index-content">
+            {% for message in messages %}
+            <p id="msg" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
+            {% endfor %}
+        </div>
+    {% endif %}
   <h1 class="fs-5 fw-bold"> Review Comments</h1>
     {% for comment in comments %}
       <div class="accordion-item ">

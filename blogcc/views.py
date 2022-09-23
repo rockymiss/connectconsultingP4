@@ -361,6 +361,9 @@ class ApproveComment(LoginRequiredMixin, View):
         if request.method == "POST":
             comment.approve = True
             comment.save()
+        messages.success(
+            self.request,
+            'The comment has been posted to the blog')
         return redirect('review_comments')
 
 
@@ -399,6 +402,9 @@ class DeleteComment(LoginRequiredMixin, DeleteView):
 
         comment = get_object_or_404(BlogComment, pk=pk)
         comment.delete()
+        messages.success(
+            self.request,
+            'The comment has been deleted')
         return redirect('review_comments')
 
 
@@ -470,7 +476,9 @@ class ApproveTestimon(LoginRequiredMixin, View):
         if request.method == "POST":
             testimonial.approve = True
             testimonial.save()
-
+        messages.success(
+            self.request,
+            'The Testimonial has been posted to the blog')
         return redirect('review_testimonial')
 
 
@@ -509,5 +517,7 @@ class DeleteTestimonial(LoginRequiredMixin, DeleteView):
 
         testimonial = get_object_or_404(Testimonial, pk=pk)
         testimonial.delete()
-
+        messages.success(
+            self.request,
+            'The comment has been deleted')
         return redirect('review_testimonial')
