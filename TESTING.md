@@ -424,7 +424,7 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: The admin user should see a heading asking them if they are sure they want to approve the comment
 | &check; |: The admin user should see two buttons 'Yes' and 'Go Back'
 | &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the Review Comments page.
-| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Comments.
+| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Comments and a message will appear confiring the comment has been approved and posted.
 
 | Status | **Delete Comments Logged-In Admin User**
 |:-------:|:--------|
@@ -434,7 +434,7 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: The admin user should see a heading asking them if they are sure they want to delete the comment
 | &check; |: The admin user should see two buttons 'Yes' and 'Go Back'
 | &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the Review Comments page.
-| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Comments and the comment is gone.
+| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Comments and the comment is gone and a message appears confirming deletion.
 
 
 | Status | **Review Testimonials - Admin**
@@ -444,8 +444,8 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: The admin user should see a white background with some circular yellow shape in it
 | &check; |: The admin user should see a list of testimonials for approval showing who wrote the testimonial and the content underneath the username
 | &check; |: The admin user should see two buttons 'Approve' and 'Delete'
-| &check; |: If the admin user clicks on 'Approve' they will be re-directed to the approve testimonial page
-| &check; |: If the admin user clicks on 'Delete' they will be re-directed to the delete testimonial page
+| &check; |: If the admin user clicks on 'Approve' they will be re-directed to the approve testimonial page and a message will appear confirming the testimonial has been approved. 
+| &check; |: If the admin user clicks on 'Delete' they will be re-directed to the delete testimonial page and a message will confirm that the Testimonial has been deleted
 
 | Status | **Approve Testimonials Logged-In Admin User**
 |:-------:|:--------|
