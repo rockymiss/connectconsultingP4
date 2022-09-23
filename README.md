@@ -283,10 +283,10 @@ This page allows the user to sign-out if they no longer require access to extra 
 - [W3schools](https://www.w3schools.com/) 
 - [Pexels](https://www.pexels.com/) for images
 
-
 ### Headshots Logo and content
 
 Images of the CEO and logos are owned by Connect Consulting and I have been given full permission to use them on the website.  Content has also been provided by Connect Consulting and permission has been given to use it.
+
 -----
 
 ## Testing
