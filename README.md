@@ -280,7 +280,7 @@ This page allows the user to sign-out if they no longer require access to extra 
 
 - [Code Institute](https://codeinstitute.net/ie/) for course materials, tutor and mentor support, in particular the use of the I Think Therefore I Blog walkthrough.  After a lot of research I found that there was very little change to Blog Post models when creating a blog.  Therefore the blog model is very similiar to the Code Instiutes model.  As such I created two other models called Testimonials inside the blogcc app and a Contact model inside the Contact app.  
 - [Slack](https://slack.com/intl/en-ie/) in particular the Code Institute Slack Community.
-- [W3schools](https://www.w3schools.com/) 
+- [W3schools](https://www.w3schools.com/)
 - [Pexels](https://www.pexels.com/) for images
 
 ### Headshots Logo and content
@@ -317,12 +317,12 @@ Deployment is done after Creating the Django Project in your virtual environment
 
 | Steps | **Notes/Code**
 |:-------:|:--------|
-| Install Django and gunicorn| pip install django gunicorn 
+| Install Django and gunicorn| pip install django gunicorn
 | Install any supporting libraries| pip install dj_database_url psycopg2
 | Create requirements.txt| pip3 freeze --local > requirements.txt
 | Create Django Project  | django-admin startproject **project name**
 | Create apps | python manage.py startapp **app name**
-| Add app to list of installed apps in settings.py || 
+| Add app to list of installed apps in settings.py ||
 | Make migrations | python3 manage.py makemigrations
 | Migrate Changes | python3 manage.py migrate
 | Test server locally | python3 manage.py runserver
@@ -330,8 +330,6 @@ Deployment is done after Creating the Django Project in your virtual environment
 | Push changes to github repository | git add. git commit and git push
 | Create new app on Heroku | https://dashboard.heroku.com/
 
-
-As the database is stored locally in Postgres on your workspace, Heroku cannot see this data. It's recommended to not migrate your existing database to Heroku as you may store sensitive data such user accounts and personal information.  A new database will need to be created that Heroku can house. 
 
 1. Click on "Resources tab" underneath the "Add-ons" section.
 1. Search of Heroku Postgres and attach it to your app.
@@ -345,6 +343,16 @@ As the database is stored locally in Postgres on your workspace, Heroku cannot s
 | PORT | 8000|
 | SECRET_KEY |: Key or your choice|
 | DEBUG | Set to True|
+| DISABLE_COLLECTSTATIC | 1|
+
+
+
+1. Update the settings.py file in particular change the debug setting, DEBUG = False to DEBUG = True
+1. In Heroku settings, config vars change the DISABLE_COLLECTSTATIC value from 1 to 0.
+1. Click the deploy tab in Heroku.
+1. In deployment method select 'Github' and click the 'connect to Github button.
+1. Searh for your repository name.
+1. Deploy Branch. 
 
 
   ### Fork a Repository: 
@@ -362,9 +370,8 @@ As the database is stored locally in Postgres on your workspace, Heroku cannot s
 
 </details>
 
+### Clone a Repository:
 
-  ### Clone a Repository: 
-        
     Cloning this project from GitHub can be done by following these steps: 
     
       - From your list of repositories select the repository you want to deploy.
@@ -386,6 +393,6 @@ As the database is stored locally in Postgres on your workspace, Heroku cannot s
 -----
 ## Acknowledegments/Conclusion
 
-I couldn't complete this without the massive support I get from my Code Institute cohort in particular [Kasia](https://github.com/bezebee), our cohort facilitator.Thanks to my mentor Spencer for being a great support and a really nice guy!
+I couldn't complete this without the massive support I get from my Code Institute cohort in particular our Cohort Facilitor [Kasia](https://github.com/bezebee) and the ever helpful and fabulous [Rhi](https://github.com/rhiannonmcn).  Thanks to my mentor Spencer for being a great support and a really nice guy! A special thanks to Dave Horrocks who helped when I really needed it.  
 
 Rachel Rock September 2022
