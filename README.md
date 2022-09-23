@@ -5,12 +5,11 @@
 
 For my **Portfolio 4 Project** on the **Code Institute's Diploma in Software Development (E-commerce Applications)** course I have created a Blog Website for a consulting Company called Connect Consulting.  
 
-Connecting Consulting is a Consulting Company that can help clients identify their business issues, develop solutions and take remedial action.  It’s main objective is to create a meaningful impact in the lives of their clients.  What sets Connect Consulting apart is their genuine passion for helping others.  Connect Consulting connect the dots of business through people.
+Connecting Consulting is a hospitality specialist consulting company that can help clients identify their business issues, develop solutions and take remedial action.  It’s main objective is to create a meaningful impact in the lives of their clients.  What sets Connect Consulting apart is their genuine passion for helping others.  Connect Consulting connect the dots of business through people.
 
 The website is created almost like a Wordpress Blog website where the user can create, view, edit and delete blogs on the frontend making it easier on the client and it saves on yearly subscription fees.
 
 Link to the deployed app is [here](https://connect-consultingp4.herokuapp.com/).
-
 
 ![alt text](https://res.cloudinary.com/rockymiss/image/upload/v1663683841/connectconsulting/mockup_wyhzpp.png)
 
@@ -73,7 +72,7 @@ Issues were created by way of User Stories or Admin User Stories and any other e
 1. As an Admin User I can create blogs so that users can read them.
 1. As an Admin User I can delete blogs so as to control content on the website.
 1. As an Admin User I can amend blogs so as to control content on the website.
-1. As an Admin User I can create testimonials so that they can be view by other users.
+1. As an Admin User I can create testimonials so that they can be viewed by other users.
 1. As an Admin User I can view messages left by other users so that I can read them and contact them if needed.
 1. As an Admin User I can approve testimonials left by the user so as to control content on the website.
 1. As an Admin User I can approve or delete comments left by the user so as to control content on the website.
@@ -167,7 +166,7 @@ Navigation appears on each page.  The design remains consistent throughout, howe
 
 #### Home Page
 
-This page is the landing page and is the first page that users will see when the site loads.  The page has a logo clearly showing that the website is about hospitalilty specialists.  Information about what the company do is shown on this page. 
+This page is the landing page and is the first page that users will see when the site loads.  The page has a logo clearly showing that the website is about hospitalilty specialists.  Information about what the company does is shown on this page. 
 
 <details open>
 <summary>Home Page</summary> 
@@ -176,7 +175,7 @@ This page is the landing page and is the first page that users will see when the
 
 #### Footer
 
-The footer simply directs the user to all social media links. It is consistent throughout the websiste and remains at the bottom of the page. For the purpose of this project the links will open the social media pages but not the companys social media as they are not yet set up. 
+The footer simply directs the user to all social media links. It is consistent throughout the websiste and remains at the bottom of the page. For the purpose of this project the links will open the social media pages but not the company's social media as they are not yet set up. 
 
 
 #### About
@@ -256,13 +255,20 @@ This page allows the user to sign-up to the website to gain access to features l
 This page allows the user to sign-out if they no longer require access to extra features. 
 
 -----
+
+## Future Implementation
+
+-----
+
+As Connecting Consulting expand their business I would like to implement an e-commerce section on their website so that clients choose and pay for services directly.  I would also see it beneficial for users to be able to have more control over testimonials by being able to edit them but for the purpose of this project I did not feel it necessary as the CRUD functionality was mainly for an admin user to make their lives easier when changing their website and updating blogs.  A subscription service would also be useful in the future so that users can receive monthly emails updating them on new blogs that have been created by Connect Consulting on their website.
+
 ## Technologies Used
 
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5) to provide content and structure to the website.
 - [CSS3](https://en.wikipedia.org/wiki/CSS) provides styles for the website.
-- [Python](https://www.python.org/) to provide functionality to the website. LIbraries used can be found in [requirements.txt](requirements.txt)
-- [Django](https://docs.djangoproject.com/en/4.1/) to test contrast.https://www.javascript.com/
+- [Python](https://www.python.org/) to provide functionality to the website. Libraries used can be found in [requirements.txt](requirements.txt)
+- [Django](https://docs.djangoproject.com/en/4.1/)
 - [Javascript](https://www.javascript.com/) for timeout functions on messages.
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) for layout and style of templates.
 - [a11y](https://color.a11y.com/Contrast/) to test contrast.
@@ -278,10 +284,13 @@ This page allows the user to sign-out if they no longer require access to extra 
 -----
 ## Resources 
 
-- [Code Institute](https://codeinstitute.net/ie/) for course materials, tutor and mentor support, in particular the use of the I Think Therefore I Blog walkthrough.  After a lot of research I found that there was very little change to Blog Post models when creating a blog.  Therefore the blog model is very similiar to the Code Instiutes model.  As such I created two other models called Testimonials inside the blogcc app and a Contact model inside the Contact app.  
+- [Code Institute](https://codeinstitute.net/ie/) for course materials, tutor and mentor support, in particular the use of the I Think Therefore I Blog walkthrough.  After a lot of research I found that there was very little change to Blog Post models when creating a blog.  Therefore the blog model is very similiar to the Code Instiute's model.  As such I created two other models called Testimonials inside the blogcc app and a Contact model inside the Contact app.  
 - [Slack](https://slack.com/intl/en-ie/) in particular the Code Institute Slack Community.
 - [W3schools](https://www.w3schools.com/)
+- [Django](https://docs.djangoproject.com/en/4.1/)
 - [Pexels](https://www.pexels.com/) for images
+- [Stack OverFlow](https://stackoverflow.com/) for guidance on issues I had, particularly in relation to slugs for blog detail.
+- [Dango Central](https://djangocentral.com/building-a-blog-application-with-django/) to help with certain aspects of the website.
 
 ### Headshots Logo and content
 
