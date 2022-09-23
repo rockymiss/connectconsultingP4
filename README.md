@@ -38,6 +38,8 @@ Site Aims
 
 To plan this project I used agile methodology.  This was done using Github and the Project Board.
 
+Link to the project app is [here](https://github.com/users/rockymiss/projects/7).
+
 By using the Kanban board and in particular Milestones I was able to divide the project into difference epics such as:
 
 1. Development
@@ -261,6 +263,8 @@ This page allows the user to sign-out if they no longer require access to extra 
 -----
 
 As Connecting Consulting expand their business I would like to implement an e-commerce section on their website so that clients choose and pay for services directly.  I would also see it beneficial for users to be able to have more control over testimonials by being able to edit them but for the purpose of this project I did not feel it necessary as the CRUD functionality was mainly for an admin user to make their lives easier when changing their website and updating blogs.  A subscription service would also be useful in the future so that users can receive monthly emails updating them on new blogs that have been created by Connect Consulting on their website.
+
+In the future I would also like to create a page for users so that they can view a list of blogs that they liked and commented on. 
 
 ## Technologies Used
 
