@@ -542,3 +542,15 @@ I got a fatal error when making migrations.   After searching for a solution in 
 ### Value Field Error
 
 When I added a new email field to the contact model I received a value field error as I had put in an incorrect default.  I deleted those migrations and corrected it when I updated the model again.
+
+### Username Dropdown Menu
+
+On final testing I noticed on the create blogs and create testimonials that the field created a dropdown list of all users to choose from.  As this would involve changing models I did not want to risk it so close to submission.  This could effectively throw errors that I could not fix.  I am aware of this error and will change it in the future.   It was a learning curve!
+
+
+<details open>
+<summary>Dropdown user menu</summary>
+<p align="center"><"static/images/readme/misc/dropdown.png"></p>
+
+</details>
+
