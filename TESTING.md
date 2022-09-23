@@ -406,13 +406,132 @@ To ensure that all elements of the website were working I carried out a detailed
 | &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the blog list page. 
 | &check; |: If the admin user clicks on 'Yes' they will be re-directed to the blog list page where a message will confirm that the blog has been deleted.
 
+| Status | **Review Comments - Admin**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a list of comments for approval showing who wrote the comment and the content underneath the username
+| &check; |: The admin user should see two buttons 'Approve Comment' and 'Delete Comment'
+| &check; |: If the admin user clicks on 'Approve Comment' they will be re-directed to theapprove comment page.
+| &check; |: If the admin user clicks on 'Delete Comment' they will be re-directed to the Delete Comment page.
+
+| Status | **Approve Comments Logged-In Admin User**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a heading asking them if they are sure they want to approve the comment
+| &check; |: The admin user should see two buttons 'Yes' and 'Go Back'
+| &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the Review Comments page.
+| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Comments.
+
+| Status | **Delete Comments Logged-In Admin User**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a heading asking them if they are sure they want to delete the comment
+| &check; |: The admin user should see two buttons 'Yes' and 'Go Back'
+| &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the Review Comments page.
+| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Comments and the comment is gone.
 
 
+| Status | **Review Testimonials - Admin**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a list of testimonials for approval showing who wrote the testimonial and the content underneath the username
+| &check; |: The admin user should see two buttons 'Approve' and 'Delete'
+| &check; |: If the admin user clicks on 'Approve' they will be re-directed to the approve testimonial page
+| &check; |: If the admin user clicks on 'Delete' they will be re-directed to the delete testimonial page
+
+| Status | **Approve Testimonials Logged-In Admin User**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a heading asking them if they are sure they want to approve the testimonial
+| &check; |: The admin user should see two buttons 'Yes' and 'Go Back'
+| &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the Review Testimonials page.
+| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Testimonials and the testimonial is gone from the list to be reviewed.
+
+| Status | **Delete Testimonials Logged-In Admin User**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a heading asking them if they are sure they want to delete the testimonial
+| &check; |: The admin user should see two buttons 'Yes' and 'Go Back'
+| &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the Review Testimonials page.
+| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Testimonials page and the testimonial is gone from the list.
+
+| Status | **Review Messages - Admin**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a list of messages to read, who wrote the message and the content of the message underneath
+| &check; |: The admin user should see one button 'Delete'
+| &check; |: If the admin user clicks on 'Delete' they will be re-directed to the delete message page
+
+
+| Status | **Delete Message Logged-In Admin User**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see a heading asking them if they are sure they want to delete the message
+| &check; |: The admin user should see two buttons 'Yes' and 'Go Back'
+| &check; |: If the admin user clicks on 'Go Back' they will be re-directed to the Review Messages page.
+| &check; |: If the admin user clicks on 'Yes' they will be re-directed to the Review Messages page and the message is gone from the list.
+
+| Status | **Draft Blog/BlogList Logged-In Admin User**
+|:-------:|:--------|
+| &check; |: The admin user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The admin user should see a footer at the bottom of the page
+| &check; |: The admin user should see a white background with some circular yellow shape in it
+| &check; |: The admin user should see draft blogs, 3 to a page in cards with a header showing a picture, The title of the draft blog, the subtitle, the author and the date created
+| &check; |: The admin user should see three buttons below the draft blog: 'View Blog', 'Edit' and 'Delete'
+| &check; |: If the admin user clicks on 'View Blog' it should direct them to the detailed view of the draft blog on it's own
+| &check; |: If the admin user clicks on 'Edit' it should direct them to the detailed view of the Blog to edit the blog
+| &check; |: If the admin user clicks on 'Delete' it should direct them to page asking them if they are sure they want to delete the blog
+| &check; |: The user should see a button on the bottom of the page with the word 'Next' if there are more than 3 draft Blogs.
+| &check; |: The user should be brought to another page of draft blogs if they click the Next button 
+| &check; |: The user should see two buttons with the words 'Prev' and 'Next' on the second page or any subsequent page
+| &check; |: The user should be brought back to the previous page if they click the 'Prev' button 
+| &check; |: The user should only see the button 'Prev' on the last page of testimonials
+
+
+| &check; | That if the user tries to access the Admin Only url that they are redirected to a 403 forbidden page
+
+| Status | **404 error**
+|:-------:|:--------|
+| &check; | Typing in a incorrect URL will load the 404 error page
+| &check; | The 404 error page should appear with the company logo and a message telling the user they are lost
+| &check; |: The user should see a Navigation Bar at the top of the page which stays fixed if the user needs to scroll down
+| &check; |: The user should see a footer at the bottom of the page
+| &check; |: The user should see a white background with some circular yellow shape in it
+
+| Status | **403 error**
+|:-------:|:--------|
+| &check; | if not a superuser the 403 page loads for the create blog page
+| &check; | if not a superuser the 403 page loads for the review comments page
+| &check; | if not a superuser the 403 page loads for the review testimonial page
+| &check; | if not a superuser the 403 page loads for the getmessage page
+| &check; | if not a superuser the 403 page loads for the blog_review page
+| &check; | if not a superuser the 403 page loads for the blog_delete page
+| &check; | if not a superuser the 403 page loads for the approve_comment page
+| &check; | if not a superuser the 403 page loads for the approve_testimonial page
+| &check; | if not a superuser the 403 page loads for the delete_comment page
+| &check; | if not a superuser the 403 page loads for the message_confirm_delete page
 
 ## Bugs
 
-### 
+###
 
 
 
 **Fix:**
+https://connect-consultingp4.herokuapp.com/blog_draft/
