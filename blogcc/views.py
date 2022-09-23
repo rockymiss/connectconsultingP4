@@ -4,7 +4,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import TemplateView, ListView
 from django.views.generic import CreateView, UpdateView, DeleteView
-from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
@@ -45,11 +45,17 @@ class BlogPostList(generic.ListView):
     context_object_name = "bloglist"
 
 
-class BlogPostDraft(generic.ListView):
+class BlogPostDraft(LoginRequiredMixin, generic.ListView):
     """
     Creates a list of blogs with status of draft
     using the BlogPost Model
     """
+    def test_func(self):
+        """
+        Checks if superuser
+        """
+        return self.request.user.is_superuser
+
     model = BlogPost
     queryset = BlogPost.objects.filter(status=0).order_by('-blog_created_on')
     template_name = 'blog/blog_draft.html'
@@ -146,7 +152,7 @@ class TestimonList(generic.ListView):
     context_object_name = "testlist"
 
 
-class CreateTestimonView(UserPassesTestMixin, CreateView):
+class CreateTestimonView(LoginRequiredMixin, CreateView):
     """
     Allows a user or admin to create
     a testionial on the front end
@@ -205,7 +211,7 @@ class Favourites(View):
 # Admin Only Views
 
 
-class CreateBlogView(UserPassesTestMixin, CreateView):
+class CreateBlogView(LoginRequiredMixin, CreateView):
     """
     Creates blog view so that admin can create a new
     blog on the front end
@@ -243,7 +249,7 @@ class CreateBlogView(UserPassesTestMixin, CreateView):
         return super().form_valid(form)
 
 
-class BlogUpdate(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
+class BlogUpdate(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     """
     Admin who is logged in can edit any blogs
     that they have created
@@ -269,25 +275,25 @@ class BlogUpdate(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
         return self.request.user.is_superuser
 
 
-class BlogDelete(UserPassesTestMixin, DeleteView):
+class BlogDelete(LoginRequiredMixin, DeleteView):
     """
     Admin who is logged in can delete any blogs
     that they have created
     """
-    model = BlogPost
-    context_object_name = "bloglist"
-    template_name = 'blog/blog_delete.html'
-    success_url = reverse_lazy('blog')
-    success_message = "Your blog has been deleted"
-
     def test_func(self):
         """
         Checks if superuser
         """
         return self.request.user.is_superuser
 
+    model = BlogPost
+    context_object_name = "bloglist"
+    template_name = 'blog/blog_delete.html'
+    success_url = reverse_lazy('blog')
+    success_message = "Your blog has been deleted"
 
-class ReviewComments(UserPassesTestMixin, ListView):
+
+class ReviewComments(LoginRequiredMixin, ListView):
     """
     Checks to see if user is superuser, gets a list of
     Comments made on a blog by user which allows Admin
@@ -317,7 +323,7 @@ class ReviewComments(UserPassesTestMixin, ListView):
         return context
 
 
-class ApproveComment(UserPassesTestMixin, View):
+class ApproveComment(LoginRequiredMixin, View):
     """
     Admin who is logged in can edit and approve comments
     that a user has created.
@@ -358,7 +364,7 @@ class ApproveComment(UserPassesTestMixin, View):
         return redirect('review_comments')
 
 
-class DeleteComment(UserPassesTestMixin, DeleteView):
+class DeleteComment(LoginRequiredMixin, DeleteView):
     """
     Checks to see if user is admin and allows admin
     to delete a comment made by the user
@@ -396,7 +402,7 @@ class DeleteComment(UserPassesTestMixin, DeleteView):
         return redirect('review_comments')
 
 
-class ReviewTestimonials(UserPassesTestMixin, ListView):
+class ReviewTestimonials(LoginRequiredMixin, ListView):
     """
     Checks to see if user is superuser, gets a list of
     Comments made on a blog by user which allows Admin
@@ -426,7 +432,7 @@ class ReviewTestimonials(UserPassesTestMixin, ListView):
         return context
 
 
-class ApproveTestimon(UserPassesTestMixin, View):
+class ApproveTestimon(LoginRequiredMixin, View):
     """
     Admin who is logged in can  approve testimonials
     that a user has created.
@@ -468,7 +474,7 @@ class ApproveTestimon(UserPassesTestMixin, View):
         return redirect('review_testimonial')
 
 
-class DeleteTestimonial(UserPassesTestMixin, DeleteView):
+class DeleteTestimonial(LoginRequiredMixin, DeleteView):
     """
     Checks to see if user is admin and allows admin
     to delete a testimonial made by the user
