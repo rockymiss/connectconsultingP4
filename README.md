@@ -315,13 +315,13 @@ Steps followed:
 
 Deployment is done after Creating the Django Project in your virtual environment.  To create the project the following need to be carried out:-
 
-| Status | **Steps**
+| Steps | **Notes/Code**
 |:-------:|:--------|
 | Install Django and gunicorn| pip install django gunicorn 
 | Install any supporting libraries| pip install dj_database_url psycopg2
 | Create requirements.txt| pip3 freeze --local > requirements.txt
 | Create Django Project  | django-admin startproject **project name**
-| Create apps |: python manage.py startapp **app name**
+| Create apps | python manage.py startapp **app name**
 | Add app to list of installed apps in settings.py || 
 | Make migrations | python3 manage.py makemigrations
 | Migrate Changes | python3 manage.py migrate
@@ -338,7 +338,7 @@ As the database is stored locally in Postgres on your workspace, Heroku cannot s
 1. Click on "Settings" tab and open "Config Vars" where you will see that a new Postgrest database URL has been automatically applied.
 1. The following environment variables should be included:
 
-| Status | **Environment Variables**
+|  | **Environment Variables**
 |:-------:|:--------|
 | DATABASE_URL ||
 | CLOUDINARY_URL| Found on cloudinary dashboard|
