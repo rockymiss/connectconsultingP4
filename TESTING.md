@@ -142,7 +142,7 @@ Errors were noted doing a validation on settings.py however as most of the file 
 
 #### admin.py
 
-![pep8 admin.py](/workspace/connectconsultingp4/static/images/readme/pep8/contact-admin.png)
+![pep8 admin.py](static/images/readme/pep8/contact-admin.png)
 
 #### apps.py
 
